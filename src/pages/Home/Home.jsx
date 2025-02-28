@@ -5,7 +5,7 @@ import FrameSection from './FrameSection'
 const Home = () => {
   return (
     <>
-          <HeroSection />
+      <HeroSection />
           <FrameSection/>
     </>
   )
