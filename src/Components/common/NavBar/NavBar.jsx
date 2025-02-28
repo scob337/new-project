@@ -24,11 +24,11 @@ export default function NavBar() {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <nav className=" fixed top-0 left-0 w-full z-50 text-white  ">
+    <nav className=" absolute top-0 left-0 w-full z-50 text-white  ">
       <div className="container flex justify-between items-center px-5 py-3">
         {/* Logo Section */}
         <div className="logo">
-          <a href="#" >
+          <a href="#">
             <img
               src={Logo}
               alt="Website Logo"
@@ -54,7 +54,7 @@ export default function NavBar() {
               </a>
 
               {item.dropList && openDropdown === index && (
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden">
+                <ul className="absolute left-0 py-2 mt-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden">
                   {item.dropList.map((dropItem) => (
                     <li
                       key={dropItem.name}
@@ -68,6 +68,14 @@ export default function NavBar() {
             </li>
           ))}
         </ul>
+        <div className="flex gap-2">
+          <button className="text-white cursor-pointer px-4 py-1 ml-2 bg-black rounded-xl hover:bg-indigo-400 transition-all duration-300">
+            Login
+          </button>
+          <button className="text-white cursor-pointer px-4 py-1 bg-indigo-500 rounded-xl hover:bg-indigo-400 transition-all duration-300">
+            Sign Up
+          </button>
+        </div>
       </div>
     </nav>
   );
