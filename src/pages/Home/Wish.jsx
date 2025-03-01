@@ -7,7 +7,7 @@ const Wish = () => {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.";
 
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-3 min-h-screen gap-4 p-4">
+    <div className="flex flex-col lg:grid lg:grid-cols-3 min-h-screen gap-4 p-4 max-lg:mb-[200px]">
       {/* Left Section */}
       <div className="flex justify-center items-center py-5 w-full lg:col-span-1">
         <div className="relative w-full p-5 text-center md:text-left">
