@@ -5,6 +5,7 @@ import Dreamers from "./Dreamers";
 import Wish from "./Wish";
 import Contribute from "./Contribute";
 import Testimonials from "./Testimonials/Testimonials";
+import WorkDesign from "./WorkDesign/WorkDesign";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Wish />
       <Contribute />
       <Testimonials />
+      <WorkDesign />
     </>
   );
 };
