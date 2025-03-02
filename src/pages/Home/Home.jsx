@@ -9,6 +9,8 @@ import WorkDesign from "./WorkDesign/WorkDesign";
 import MobileMockupSlider from "./VideoSliders/Slider";
 import GalleryPage from "./ImageGallary/imgGallary";
 import BlogFeed from "./Blog/BlogFeed";
+import Questions from "./Questions/Questions";
+
 
 const Home = () => {
   return (
@@ -22,7 +24,8 @@ const Home = () => {
       <WorkDesign />
       <MobileMockupSlider />
       <GalleryPage />
-      <BlogFeed/>
+      <BlogFeed />
+      <Questions/>
     </>
   );
 };
