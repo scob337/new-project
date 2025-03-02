@@ -6,6 +6,7 @@ import Wish from "./Wish";
 import Contribute from "./Contribute";
 import Testimonials from "./Testimonials/Testimonials";
 import WorkDesign from "./WorkDesign/WorkDesign";
+import MobileMockupSlider from "./VideoSliders/Slider";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Contribute />
       <Testimonials />
       <WorkDesign />
+      <MobileMockupSlider/>
     </>
   );
 };

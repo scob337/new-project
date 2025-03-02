@@ -3,7 +3,7 @@ import WorkCard from "./WorkCard";
 
 const WorkDesign = () => {
   return (
-    <div className="min-h-screen my-10  ">
+    <div className="min-h-[70vh] my-10  ">
       <MainTitle ColorTitle="epically" Title="Designed To Work" />
 
       <div className="grid place-items-center grid-cols-1 lg:grid-cols-2 w-[80%] m-auto">
