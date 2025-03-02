@@ -7,6 +7,8 @@ import Contribute from "./Contribute";
 import Testimonials from "./Testimonials/Testimonials";
 import WorkDesign from "./WorkDesign/WorkDesign";
 import MobileMockupSlider from "./VideoSliders/Slider";
+import GalleryPage from "./ImageGallary/imgGallary";
+import BlogFeed from "./Blog/BlogFeed";
 
 const Home = () => {
   return (
@@ -18,7 +20,9 @@ const Home = () => {
       <Contribute />
       <Testimonials />
       <WorkDesign />
-      <MobileMockupSlider/>
+      <MobileMockupSlider />
+      <GalleryPage />
+      <BlogFeed/>
     </>
   );
 };
