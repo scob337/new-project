@@ -11,3 +11,10 @@
     background-color: black !important;
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
