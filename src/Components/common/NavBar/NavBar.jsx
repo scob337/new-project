@@ -33,8 +33,8 @@ export default function NavBar() {
     };
   }, []);
   return (
-    <nav className="absolute top-5  left-[20%] w-[75%] h-[74px] xl:w-[65%] rounded-4xl z-50 text-white bg-black">
-      <div className="container flex justify-between items-center px-5 py-1">
+    <nav className="absolute top-5  left-[20%] w-[75%] h-[74px] xl:w-[66%] rounded-4xl z-50 text-white bg-black">
+      <div className="container flex justify-between items-center px-5 py-2">
         {/* Logo Section */}
         <div className="logo ">
           <CustomButton>
