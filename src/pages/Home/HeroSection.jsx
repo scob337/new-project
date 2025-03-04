@@ -1,13 +1,11 @@
-import HeroImg from "../../assets/images/bgDesktop.webp";
+import HeroImg from "../../assets/images/bgDesktop.png";
 import { FaPlay } from "react-icons/fa";
-
+import CustomButton from "../../Components/sharedComponents/Button";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
+import Google from '../../assets/images/icons8-google-play-store.svg'
 const HeroSection = () => {
-  const PlayStore =
-    "https://wishew.com/_next/image?url=%2Fimg%2Fgoogle-play.webp&w=256&q=75";
-  const AppStore =
-    "https://wishew.com/_next/image?url=%2Fimg%2Fapp-store.webp&w=256&q=75";
   return (
-    <div className="relative  h-screen text-white overflow-hidden">
+    <div className="relative h-[90vh] text-white overflow-hidden">
       <div className="absolute inset-0 h-full">
         <img
           src={HeroImg}
@@ -16,34 +14,48 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center mt-15">
-        <h1 className="text-3xl font-bold leading-tight mb-4 w-80">
-          Welcome to Our Awesome Website
+      <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/80"></div>
+
+      <div className="relative font-[coolvetica] z-10 flex flex-col justify-center items-center h-full text-center mt-15">
+        <h1 className="text-3xl font-bold leading-tight mb-1 w-[40%]">
+          Transforming Wishes into Wonderful Moments.
         </h1>
-        <p className="text-lg text-gray-300 mb-8 w-70">
-          Discover amazing features and services that await you.
+        <p className="text-lg text-gray-300 mb-8 w-90">
+          Because every celebration tells a story let Cadonizer help you write
+          yours.{" "}
         </p>
-        <a
-          href="#"
-          className="bg-green-500 text-gray-900
-                  w-[50px] h-[50px] flex justify-center items-center
-           hover:bg-green-300 rounded-full
-            text-lg font-semibold transition duration-300
-             ease-in-out transform  hover:shadow-lg"
-        >
-          <FaPlay />
-        </a>
-        <div className="flex gap-5 mt-10">
-          <img
-            src={PlayStore}
-            alt="PlayStore"
-            className="w-25 lg:w-50 cursor-pointer"
-          />
-          <img
-            src={AppStore}
-            alt="AppStore"
-            className="w-25 lg:w-50 cursor-pointer"
-          />
+
+        <CustomButton>
+          <div className="flex justify-between items-center w-[90%]">
+            <div className="relative w-[50px] h-[85px] flex items-center justify-center">
+              <div className="absolute w-[45px] h-[45px] bg-[#DBF881] opacity-40 rounded-full shadow-lg"></div>
+              <div className="absolute w-[35px] h-[35px] bg-[#DBF881] opacity-40 rounded-full"></div>
+              <div className="absolute w-[34px] h-[34px] bg-[#DBF881] rounded-full flex items-center justify-center">
+                <FaPlay className="text-[#081C35] text-[18px] " />
+              </div>
+            </div>
+            <span className="px-2">Watch video</span>
+          </div>
+        </CustomButton>
+
+        <div className="flex flex-wrap gap-4 mt-7">
+          {/* زر Google Play */}
+          <button className="flex cursor-pointer items-center gap-2 px-5 py-2 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
+            <img src={Google} alt="" />
+            <div className="text-left">
+              <p className="text-xs">Get it on</p>
+              <p className="text-lg font-semibold">Google Play</p>
+            </div>
+          </button>
+
+          {/* زر App Store */}
+          <button className="flex cursor-pointer items-center gap-2 px-5 py-2 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
+            <FaApple className="text-2xl text-white" />
+            <div className="text-left">
+              <p className="text-xs">Download on the</p>
+              <p className="text-lg font-semibold">App Store</p>
+            </div>
+          </button>
         </div>
       </div>
     </div>

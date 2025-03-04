@@ -1,33 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import Logo from "../../../assets/images/Logo.png";
+import CustomButton from "../../sharedComponents/Button";
 const navigation = [
   {
     name: "Blog",
     href: "#",
-    dropList: [
-      { name: "News", href: "#" },
-      { name: "Tech", href: "#" },
-      { name: "Business", href: "#" },
-      { name: "Entertainment", href: "#" },
-    ],
   },
   {
     name: "Tools",
     href: "#",
-    dropList: [
-      { name: "News", href: "#" },
-      { name: "Tech", href: "#" },
-      { name: "Business", href: "#" },
-      { name: "Entertainment", href: "#" },
-    ],
   },
-  { name: "About", href: "#" },
+  { name: "About Us", href: "#" },
 ];
-
-const Logo =
-  "https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600";
 
 export default function NavBar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -46,19 +32,20 @@ export default function NavBar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 text-white bg-gray-900">
-      <div className="container flex justify-between items-center px-5 py-3">
+    <nav className="absolute top-5  left-[20%] w-[75%] h-[74px] xl:w-[65%] rounded-4xl z-50 text-white bg-black">
+      <div className="container flex justify-between items-center px-5 py-1">
         {/* Logo Section */}
-        <div className="logo">
-          <a href="#">
-            <img
-              src={Logo}
-              alt="Website Logo"
-              className="w-[80px] h-[60px] object-cover object-center"
-            />
-          </a>
+        <div className="logo ">
+          <CustomButton>
+            <a href="#">
+              <img
+                src={Logo}
+                alt="icon"
+                className="w-full h-full object-cover object-center filter invert"
+              />
+            </a>
+          </CustomButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -71,18 +58,19 @@ export default function NavBar() {
 
         {/* Navigation Menu */}
         <ul
-          ref={menuRef} // إضافة الـ ref هنا لمراقبة النقرات الخارجية
-          className={`lg:flex gap-5 items-center absolute lg:static top-full left-0 w-full lg:w-auto bg-gray-900 lg:bg-transparent transition-all duration-300 ${
+          ref={menuRef}
+          className={`lg:flex gap-5 items-center absolute lg:static top-full left-0 w-full lg:w-auto bg-black rounded-4xl lg:bg-transparent transition-all duration-300 ${
             isMenuOpen ? "block" : "hidden"
           } lg:flex-row flex-col p-5 lg:p-0`}
         >
           {navigation.map((item, index) => (
             <li
               key={item.name}
-              className="relative text-[18px] font-semibold p-2"
+              className="relative text-[16px]  p-2"
+              style={{ fontWeight: "500" }}
             >
               <div
-                className="flex items-center gap-1 justify-between cursor-pointer hover:text-indigo-400"
+                className="flex items-center min-w-[100px] lg:text-center gap-1 p-2 rounded-2xl justify-between cursor-pointer hover:bg-indigo-400"
                 onClick={() =>
                   item.dropList &&
                   setOpenDropdown(openDropdown === index ? null : index)
@@ -113,10 +101,18 @@ export default function NavBar() {
 
           {/* Buttons inside dropdown in mobile */}
           <div className="lg:hidden flex flex-col gap-2 mt-3">
-            <button className="text-white cursor-pointer px-4 py-2 bg-black rounded-xl hover:bg-indigo-400 transition-all duration-300">
-              Login
+            <button
+              className="text-black  cursor-pointer
+          
+          px-5 py-2 ml-2 bg-[#DBF880]  rounded-3xl"
+            >
+              Log in
             </button>
-            <button className="text-white cursor-pointer px-4 py-2 bg-indigo-500 rounded-xl hover:bg-indigo-400 transition-all duration-300">
+            <button
+              className="text-white cursor-pointer
+          
+          px-5 py-2 bg-indigo-500 rounded-3xl"
+            >
               Sign Up
             </button>
           </div>
@@ -124,10 +120,18 @@ export default function NavBar() {
 
         {/* Buttons visible in large screens */}
         <div className="hidden lg:flex gap-2">
-          <button className="text-white cursor-pointer px-4 py-1 ml-2 bg-black rounded-xl hover:bg-indigo-400 transition-all duration-300">
-            Login
+          <button
+            className="text-black  cursor-pointer
+          
+          px-5 py-2 ml-2 bg-[#DBF880]  rounded-3xl"
+          >
+            Log in
           </button>
-          <button className="text-white cursor-pointer px-4 py-1 bg-indigo-500 rounded-xl hover:bg-indigo-400 transition-all duration-300">
+          <button
+            className="text-white cursor-pointer
+          
+          px-5 py-2 bg-indigo-500 rounded-3xl"
+          >
             Sign Up
           </button>
         </div>
