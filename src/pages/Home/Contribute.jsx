@@ -33,8 +33,8 @@ const Contribute = () => {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            
+            transition={{ duration: 1, ease: "easeOut" }}
             className="absolute w-[280px] h-[95%] scale-[1.5] lg:scale-[2] top-[-7px] z-10 after:content-[''] after:absolute after:bottom-[85px] after:left-0 after:w-full after:h-[15%] after:bg-white"
           >
             <img
