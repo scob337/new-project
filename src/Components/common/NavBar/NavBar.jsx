@@ -6,7 +6,21 @@ import CustomButton from "../../sharedComponents/Button";
 const navigation = [
   {
     name: "Blog",
-    href: "#",
+    dropList: [
+      { name: "Wedding Planning", href: "#" },
+      { name: "Venues", href: "#" },
+      { name: "Destination Wedding", href: "#" },
+      { name: "Ceremoney", href: "#" },
+      { name: "Reception", href: "#" },
+      { name: "Invitation and Stationery", href: "#" },
+      { name: "Wedding Decor", href: "#" },
+      { name: "Flowers and Bouquets", href: "#" },
+      { name: "Food and Drink", href: "#" },
+      { name: "Wedding Cakes", href: "#" },
+      { name: "Photography", href: "#" },
+      { name: "Music", href: "#" },
+      { name: "Etiquette", href: "#" },
+    ],
   },
   {
     name: "Tools",
@@ -70,7 +84,7 @@ export default function NavBar() {
               style={{ fontWeight: "500" }}
             >
               <div
-                className="flex items-center min-w-[100px] lg:text-center gap-1 p-2 rounded-2xl justify-between cursor-pointer hover:bg-indigo-400"
+                className="flex items-center min-w-[100px] lg:text-center gap-1 p-2 rounded-2xl justify-between cursor-pointer hover:text-indigo-400"
                 onClick={() =>
                   item.dropList &&
                   setOpenDropdown(openDropdown === index ? null : index)
@@ -83,11 +97,11 @@ export default function NavBar() {
               </div>
 
               {item.dropList && openDropdown === index && (
-                <ul className="lg:absolute left-0 py-2 mt-2 w-full lg:w-50 lg:bg-white shadow-lg rounded-lg overflow-hidden lg:block">
+                <ul className="lg:absolute left-0 py-2 mt-2 w-full lg:w-70 lg:bg-white shadow-lg rounded-lg overflow-hidden lg:block">
                   {item.dropList.map((dropItem) => (
                     <li
                       key={dropItem.name}
-                      className="px-4 py-2 w-[100%] lg:w-50 text-white lg:text-black hover:bg-indigo-500 hover:text-white transition-all duration-300"
+                      className="px-4 py-2 w-[100%]  text-white lg:text-black underline-offset-4 hover:text-indigo-500 hover:decoration-indigo-400 decoration-4 hover:underline transition-all duration-300"
                     >
                       <a className="block" href={dropItem.href}>
                         {dropItem.name}

@@ -60,7 +60,7 @@ const Dreamers = () => {
           return (
             <div
               key={index}
-              className="group bg-white hover:bg-[#9188F1] cursor-pointer shadow-lg lg:w-1/5 md:w-1/4 sm:w-1/3 w-1/2 h-[200px] flex flex-col justify-center items-center gap-1 p-3 rounded-lg border border-gray-200 transition-transform duration-300 hover:scale-105"
+              className="group bg-white hover:bg-[#9188F1] cursor-pointer shadow-md lg:w-1/5 md:w-1/4 sm:w-1/3 w-1/2 h-[200px] flex flex-col justify-center items-center gap-1 p-3 rounded-lg border border-gray-200 transition-transform duration-300 hover:scale-105"
             >
               <span className="relative flex items-center justify-center w-20 h-20 rounded-full group-hover:bg-[#A29BF3]  bg-gray-800 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">
                 <span className="flex items-center justify-center w-15 h-15 rounded-full group-hover:bg-[#B4AEF5]  bg-gray-700 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">
@@ -78,6 +78,9 @@ const Dreamers = () => {
           );
         })}
       </div>
+      <button className="mt-10 px-4 py-2 bg-[#9188F1] text-white rounded-3xl cursor-pointer  ">
+        Learn More
+      </button>
     </div>
   );
 };
