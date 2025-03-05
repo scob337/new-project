@@ -77,7 +77,7 @@ const Footer = () => {
 
       {/* Scroll to Top Button */}
       <button
-        className="fixed bottom-5 right-5 bg-orange-500 cursor-pointer text-white p-2 rounded-full shadow-md hover:bg-orange-600 transition"
+        className="fixed z-50 bottom-5 right-5 bg-orange-500 cursor-pointer text-white p-2 rounded-full shadow-md hover:bg-orange-600 transition"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <IoIosArrowUp size={20} />

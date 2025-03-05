@@ -1,5 +1,4 @@
 import CardWithImg from "../../Components/sharedComponents/CardWithImg";
-import CardWithText from "../../Components/sharedComponents/CardWithText";
 import MobileMockup from "../../Components/sharedComponents/MobileMockup";
 
 const Wish = () => {
@@ -33,34 +32,13 @@ const Wish = () => {
           <CardWithImg />
         </div>
         <div className="lg:absolute lg:top-[35%] max-lg:mt-[150px] lg:left-[30%] rotate-[-3deg] transform -translate-x-1/2 w-20 h-4 z-50 md:w-24 md:h-5">
-          <CardWithText
-            BG={"#CCC6D9"}
-            TextColor={"black"}
-            ButtonBG={"#fff"}
-            ButtonColor={"#000"}
-            PriceColor={"white"}
-            HeaderColor={"white"}
-          />
+          <CardWithImg />
         </div>
         <div className="lg:absolute lg:top-[37%] max-lg:mt-[150px] lg:left-[77%] rotate-[-5deg] transform -translate-x-1/2 w-20 h-4 z-50 md:w-24 md:h-5  md:block">
-          <CardWithText
-            BG={"white"}
-            TextColor={"black"}
-            ButtonBG={"#EB5C95"}
-            ButtonColor={"#fff"}
-            PriceColor={"#EB5C95"}
-            HeaderColor={"#EB5C95"}
-          />
+          <CardWithImg />
         </div>
         <div className="lg:absolute lg:top-[35%] max-lg:mt-[150px] lg:left-[55%] rotate-[5deg] transform -translate-x-1/2 w-20 h-4 z-50 md:w-24 md:h-5">
-          <CardWithText
-            BG={"#EB5C95"}
-            TextColor={"white"}
-            ButtonBG={"#fff"}
-            ButtonColor={"#000"}
-            PriceColor={"white"}
-            HeaderColor={"white"}
-          />
+          <CardWithImg />
         </div>
 
         <div className="lg:absolute lg:top-[15%] max-lg:mt-[150px] lg:right-11 rotate-[7deg] transform -translate-x-1/2 w-20 h-4 z-50 md:w-24 md:h-5  md:block">

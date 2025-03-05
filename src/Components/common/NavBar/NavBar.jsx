@@ -33,7 +33,7 @@ export default function NavBar() {
     };
   }, []);
   return (
-    <nav className="absolute top-5  left-[20%] w-[75%] h-[74px] xl:w-[66%] rounded-4xl z-50 text-white bg-black">
+    <nav className="absolute top-5  left-[5%] lg:left-[20%]  max-md:w-[90%]  lg:w-[75%] h-[74px] xl:w-[66%] rounded-4xl z-50 text-white bg-black">
       <div className="container flex justify-between items-center px-5 py-2">
         {/* Logo Section */}
         <div className="logo ">
@@ -42,7 +42,7 @@ export default function NavBar() {
               <img
                 src={Logo}
                 alt="icon"
-                className="w-full h-full object-cover object-center filter invert"
+                className="w-[80%] m-auto h-full object-cover object-center"
               />
             </a>
           </CustomButton>

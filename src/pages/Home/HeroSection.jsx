@@ -5,7 +5,7 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 import Google from '../../assets/images/icons8-google-play-store.svg'
 const HeroSection = () => {
   return (
-    <div className="relative h-[90vh] text-white overflow-hidden">
+    <div className="relative h-screen text-white overflow-hidden">
       <div className="absolute inset-0 h-full">
         <img
           src={HeroImg}
@@ -16,11 +16,11 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/80"></div>
 
-      <div className="relative font-[coolvetica] z-10 flex flex-col justify-center items-center h-full text-center mt-15">
-        <h1 className="text-3xl font-bold leading-tight mb-1 w-[40%]">
+      <div className="relative font-[coolvetica] z-10 flex flex-col justify-center items-center h-full text-center mt-30 lg:mt-50">
+        <h1 className="text-3xl font-bold leading-tight mb-1 lg:w-[40%] max-md:text-2xl">
           Transforming Wishes into Wonderful Moments.
         </h1>
-        <p className="text-lg text-gray-300 mb-8 w-90">
+        <p className="text-lg text-gray-300 mb-8 w-90 max-md:w-[80%]">
           Because every celebration tells a story let Cadonizer help you write
           yours.{" "}
         </p>
@@ -38,9 +38,9 @@ const HeroSection = () => {
           </div>
         </CustomButton>
 
-        <div className="flex flex-wrap gap-4 mt-7">
+        <div className="flex flex-wrap gap-4 mt-7 max-md:justify-center">
           {/* زر Google Play */}
-          <button className="flex cursor-pointer items-center gap-2 px-5 py-2 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
+          <button className="flex cursor-pointer items-center gap-2 px-5 py-1 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
             <img src={Google} alt="" />
             <div className="text-left">
               <p className="text-xs">Get it on</p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           </button>
 
           {/* زر App Store */}
-          <button className="flex cursor-pointer items-center gap-2 px-5 py-2 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
+          <button className="flex cursor-pointer items-center gap-2 px-5 py-1 bg-black text-white rounded-full shadow-lg hover:scale-105 transition">
             <FaApple className="text-2xl text-white" />
             <div className="text-left">
               <p className="text-xs">Download on the</p>

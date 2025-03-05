@@ -14,11 +14,10 @@ import Questions from "./Questions/Questions";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden" >
       <HeroSection />
       <FrameSection />
       <Dreamers />
-      <Wish />
       <Contribute />
       <Testimonials />
       <WorkDesign />
@@ -26,7 +25,7 @@ const Home = () => {
       <GalleryPage />
       <BlogFeed />
       <Questions/>
-    </>
+    </div>
   );
 };
 

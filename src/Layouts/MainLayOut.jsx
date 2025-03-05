@@ -3,7 +3,7 @@ import NavBar from "../Components/common/NavBar/NavBar";
 import Home from "../pages/Home/Home";
 
 const MainLayOut = () => {
-    return <>
+    return < >
         <NavBar />
         <Home/> 
         <Footer/>
