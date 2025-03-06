@@ -4,14 +4,16 @@ import Image2 from "../../assets/images/Dreamer1.jfif";
 import Image3 from "../../assets/images/Dreamer2.jfif";
 import IconImage from "../../assets/images/Dreamer3.jfif";
 import StoreButtons from "../../Components/sharedComponents/storeButtons";
+import BackGround from "../../Components/sharedComponents/BackGround";
 
 const Contribute = () => {
+  const Motion = motion;
   return (
-    <div className="min-h-screen my-10 grid place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
-      <div className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15">
+    <div className=" min-h-screen grid  place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
+      <div className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10">
         <div className="flex flex-col gap-2">
-          <h1 className="text-5xl font-bold">Why Contribute?</h1>
-          <h1 className="text-[#968AEF] text-5xl font-bold">
+          <h1 className="text-2xl lg:text-5xl font-bold ">Why Contribute?</h1>
+          <h1 className="text-[#968AEF] text-2xl lg:text-5xl font-bold">
             It's Stunning deal
           </h1>
         </div>
@@ -25,15 +27,11 @@ const Contribute = () => {
 
       <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
         <div className="relative flex justify-center items-center w-[300px] lg:w-[350px] h-[550px] px-5">
-          <div className="absolute w-[300px] lg:w-[400px] h-[380px] lg:h-[420px] rounded-[30px] overflow-hidden bg-[#9188F1] flex items-center justify-center">
-            <div className="absolute w-[300px] h-[300px] bg-white opacity-10 rounded-full top-[-50px] left-[-40px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>
-            <div className="absolute w-[320px] h-[320px] bg-white opacity-10 rounded-full bottom-[10px] right-[-10px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>
-          </div>
+          <BackGround />
 
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            
             transition={{ duration: 1, ease: "easeOut" }}
             className="absolute w-[280px] h-[95%] scale-[1.5] lg:scale-[2] top-[-7px] z-10 after:content-[''] after:absolute after:bottom-[85px] after:left-0 after:w-full after:h-[15%] after:bg-white"
           >

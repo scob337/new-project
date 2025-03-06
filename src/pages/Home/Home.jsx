@@ -10,21 +10,23 @@ import MobileMockupSlider from "./VideoSliders/Slider";
 import GalleryPage from "./ImageGallary/imgGallary";
 import BlogFeed from "./Blog/BlogFeed";
 import Questions from "./Questions/Questions";
+import Contribute2 from "./Contribute2";
 
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden" >
+    <div className="overflow-x-hidden">
       <HeroSection />
       <FrameSection />
       <Dreamers />
       <Contribute />
+      <Contribute2 />
       <Testimonials />
       <WorkDesign />
       <MobileMockupSlider />
       <GalleryPage />
       <BlogFeed />
-      <Questions/>
+      <Questions />
     </div>
   );
 };
