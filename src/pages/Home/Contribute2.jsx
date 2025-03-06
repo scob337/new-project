@@ -3,6 +3,7 @@ import Image from "../../assets/images/mobile1.png";
 import StoreButtons from "../../Components/sharedComponents/storeButtons";
 
 const Contribute2 = () => {
+  const Motion = motion;
   return (
     <div className="lg:min-h-[50vh]  min-h-screen grid place-items-center  gap-10 grid-cols-1 lg:grid-cols-2 w-full mb-10 ">
       <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
@@ -10,7 +11,7 @@ const Contribute2 = () => {
           {/* الخلفية */}
           <div className="Background absolute w-full lg:w-[400px] h-full lg:h-[420px] rounded-[30px] overflow-hidden bg-[#9188F1] flex items-center justify-center">
             {/* الصورة داخل الخلفية بمكان مضبوط */}
-            <motion.div
+            <Motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -21,7 +22,7 @@ const Contribute2 = () => {
                 alt="Mobile UI"
                 className="w-full h-full object-cover MobileUI"
               />
-            </motion.div>
+            </Motion.div>
 
             {/* الدوائر الزخرفية */}
             <div className="absolute w-[300px] h-[300px] bg-white opacity-10 rounded-full top-[-50px] left-[-40px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>

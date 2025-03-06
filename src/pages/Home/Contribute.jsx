@@ -29,7 +29,7 @@ const Contribute = () => {
         <div className="relative flex justify-center items-center w-[300px] lg:w-[350px] h-[550px] px-5">
           <BackGround />
 
-          <motion.div
+          <Motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -40,7 +40,7 @@ const Contribute = () => {
               alt="Mobile UI"
               className="w-full h-full object-cover MobileUI"
             />
-          </motion.div>
+          </Motion.div>
 
           <div className="absolute left-[-40px] lg:left-[-70px] top-[32%] lg:top-[37%] w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20">
             <img
