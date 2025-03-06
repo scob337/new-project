@@ -8,7 +8,7 @@ import CardWithImg from "../../Components/sharedComponents/CardWithImg";
 
 const FrameSection = () => {
   const [Muted, setMuted] = useState(true);
-
+  const Motion = motion;
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.4,
@@ -49,7 +49,7 @@ const FrameSection = () => {
         </div>
 
         <div className="relative w-full flex flex-wrap lg:flex-nowrap justify-center items-center mt-10 lg:absolute lg:w-auto">
-          <motion.div
+          <Motion.div
             className="absolute  hidden lg:inline-block top-[250px] left-[-180px] rotate-[-6deg] z-20"
             initial={{ x: -200, opacity: 0 }}
             animate={
@@ -58,18 +58,18 @@ const FrameSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <CardWithImg title="Invitation Design" image="path/to/image1.jpg" />
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             className="absolute  hidden lg:inline-block top-[250px] right-[-200px] rotate-[6deg] z-40"
             initial={{ x: 180, opacity: 0 }}
             animate={inView ? { x: [180, 210, 200], opacity: [0, 1, 1] } : {}}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <CardWithImg title="RSVP Tracking" image="path/to/image2.jpg" />
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             className="absolute hidden lg:inline-block  top-[-10%] lg:left-[-200px]  rotate-[-6deg]"
             initial={{ x: -200, opacity: 0 }}
             animate={
@@ -81,9 +81,9 @@ const FrameSection = () => {
               title="Wishlist Gift Planning"
               image="path/to/image3.jpg"
             />
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             className="absolute  hidden lg:inline-block  top-[40%] right-[-200px] rotate-[6deg] z-40"
             initial={{ x: 200, opacity: 0 }}
             animate={inView ? { x: [200, 205, 200], opacity: [0, 1, 1] } : {}}
@@ -93,7 +93,7 @@ const FrameSection = () => {
               title="AI Event Assistant"
               image="path/to/image4.jpg"
             />
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </div>

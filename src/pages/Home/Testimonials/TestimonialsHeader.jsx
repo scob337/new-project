@@ -2,13 +2,13 @@ import { BsHearts } from "react-icons/bs";
 
 const TestimonialsHeader = () => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-1">
       <h1 className="text-3xl font-bold text-white text-center">
-        Testimonials
+        What our <span className="text-[#DBF881]">Users</span> Say
       </h1>
-      <p className="text-[#DAF683] font-bold text-2xl lg:text-4xl flex justify-center text-center items-center gap-1">
-        Why They love Cadonizer
-        <BsHearts color="red" size={26} className="mb-3" />
+      <p className=" w-[400px]  m-auto text-[17px] text-white flex justify-center text-center items-center gap-1">
+        See How Cadonizer Is Making Gifting Effortless And Unforgettable One
+        Wish At A Time!
       </p>
     </div>
   );

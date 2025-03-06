@@ -8,6 +8,7 @@ import BackGround from "../../Components/sharedComponents/BackGround";
 
 const Contribute = () => {
   const Motion = motion;
+
   return (
     <div className=" min-h-screen grid  place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
       <div className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10">

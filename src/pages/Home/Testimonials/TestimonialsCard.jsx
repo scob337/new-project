@@ -1,32 +1,44 @@
-import { FaStar } from "react-icons/fa";
+import React from "react";
+import Qoute from "../../../assets/images/qoute.png";
+const TestimonialCard = (props) => {
+  const { name, role, message, IMG } = props;
 
-const TestimonialCard = ({ testimonial }) => {
+  const formattedMessage = message.replace(
+    /Cadonizer/g,
+    '<strong class="font-bold text-black">Cadonizer</strong>'
+  );
+
   return (
-    <div className=" px-6 py-5 rounded-lg shadow-md bg-white w-full max-w-xs relative  min-h-[320px]">
-      <div className="  z-50 flex justify-center items-start mb-5">
-        <img
-          src={testimonial.image}
-          alt={testimonial.name}
-          className="w-20 h-20 rounded-full border-4 border-white shadow-lg"
-        />
+    <div className="w-[360px] max-w-md h-[360px] flex flex-col justify-between bg-white shadow-lg rounded-2xl p-2 border border-gray-200">
+      {/* Logo & Quote */}
+      <div className="flex justify-between items-start">
+        <img src="" alt="Logo" className="w-24 opacity-60" />
+        <span className="w-15 h-15 text-gray-300 font-bold">
+          <img src={Qoute} alt="" />
+        </span>
       </div>
 
-      <div className="m-5">
-        <div className="flex justify-center mb-5">
-          {Array.from({ length: 5 }, (_, index) => (
-            <span
-              key={index}
-              className="inline-block text-sm px-1 text-[#F17BA7]"
-            >
-              <FaStar />
-            </span>
-          ))}
+      {/* Message */}
+      <p
+        className="text-gray-600 italic my-3"
+        dangerouslySetInnerHTML={{ __html: formattedMessage }}
+      />
+
+      {/* Rating */}
+      <div className="flex justify-center gap-1 text-yellow-500 text-xl my-3">
+        {"★".repeat(5)}
+      </div>
+
+      <div className="flex items-center w-full justify-center px-4 py-2 rounded-lg">
+        <img
+          src={IMG}
+          alt={name}
+          className="w-15 h-15 object-cover object-center rounded-full mr-3 "
+        />
+        <div className="bg-[#DBF880] w-[300px] h-[60px] rounded-4xl flex flex-col items-start justify-center pl-3">
+          <p className="text-xs text-gray-600">{role}</p>
+          <p className="text-black font-semibold">{name}</p>
         </div>
-        <h3 className="text-lg font-bold">{testimonial.name}</h3>
-        <p className="text-gray-700 mt-3 italic">"{testimonial.message}"</p>
-        <span className="text-xs text-gray-400 mt-2 block">
-          {testimonial.date}
-        </span>
       </div>
     </div>
   );
