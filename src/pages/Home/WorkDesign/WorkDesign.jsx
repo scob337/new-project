@@ -5,7 +5,7 @@ const WorkDesign = () => {
   return (
     <div className="relative flex flex-col gap-[100px] py-30 max-md:mb-[300px] max-lg:mb-[350px]" >
       <div className="flex flex-col h-full md:h-[50%] py-5">
-        <h1 className="text-[30px] text-center font-[coolvetica]">
+        <h1 className="text-[30px] text-center font-bold font-[coolvetica]">
           Make <span className="text-[#9188F1]">Gifting</span> Simple &
           Meaningful
         </h1>

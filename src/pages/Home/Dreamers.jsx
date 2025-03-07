@@ -46,7 +46,7 @@ const iconList = [
 const Dreamers = () => {
   return (
     <div className="flex flex-col justify-center items-center py-0 w-full">
-      <h1 className="text-2xl lg:text-3xl font-[coolvetica]  leading-tight mb-2 text-center">
+      <h1 className="text-2xl lg:text-3xl font-[coolvetica] font-bold leading-tight mb-2 text-center">
         What <span className="text-[#968AEF]">dreamers</span> think of us
       </h1>
       <p className="text-gray-400 text-xl w-[90%] lg:w-[33%] text-center mb-7">

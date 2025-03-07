@@ -5,7 +5,7 @@ const Slider = () => {
   return (
     <div className="relative min-h-screen flex flex-col gap-10 pt-40 z-10">
       <div className="flex flex-col">
-        <h1 className="text-3xl  text-center font-[coolvetica]">
+        <h1 className="text-3xl  text-center font-bold font-[coolvetica]">
           Experience the Magic of{" "}
           <span className="text-[#9188F1]">Cadonizer</span>
         </h1>

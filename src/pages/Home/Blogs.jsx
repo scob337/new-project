@@ -8,6 +8,7 @@ const blogPosts = [
   {
     id: 1,
     image: BlogImg1,
+    date: "March 18, 2024",
     readTime: "9 min read",
     title: "The Ultimate Guide to Stress-Free Gifting",
     description:
@@ -73,19 +74,16 @@ const BlogSlider = () => {
 
   return (
     <div className="max-w-6xl mx-auto py-10 px-5 overflow-hidden">
-      <div className="flex  justify-between items-start">
+      <div className="flex justify-between items-start">
         <div className="px-2">
-          {" "}
-          <h1 className="lg:text-3xl text-xl font-bold  ">
+          <h1 className="lg:text-3xl text-xl font-bold">
             Check Our <span className="text-[#9188F1]">Blogs</span>
           </h1>
-          <p className="text-gray-500 lg:text-[18px] mb-8 lg:w-[60%] ">
+          <p className="text-gray-500 lg:text-[18px] mb-8 lg:w-[60%]">
             Smart Gifting Ideas For Every Occasion!
           </p>
         </div>
-        <button class="lg:w-[170px] lg:h-[52px]
-          w-[150px] h-[40px] text-[14px]
-        cursor-pointer rounded-[26px] bg-[#9188F1] text-white lg:text-[16px] font-medium shadow-lg hover:bg-[#7a75d9] transition duration-300">
+        <button className="lg:w-[170px] lg:h-[52px] w-[150px] h-[40px] text-[14px] rounded-[26px] bg-[#9188F1] text-white lg:text-[16px] font-medium shadow-lg hover:bg-[#7a75d9] transition duration-300">
           Learn more
         </button>
       </div>
@@ -103,7 +101,7 @@ const BlogSlider = () => {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="flex-shrink-0 p-3"
+              className="flex-shrink-0 p-3 min-h-[350px] flex flex-col justify-between"
               style={{
                 width:
                   window.innerWidth >= 1024
@@ -116,13 +114,15 @@ const BlogSlider = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-[100%] h-[250px] object-cover object-center mb-3"
+                className="w-full h-[250px] object-cover object-center mb-3"
               />
               <p className="text-gray-400 text-sm">
                 {post.date} • {post.readTime}
               </p>
               <h3 className="font-semibold text-lg my-1">{post.title}</h3>
-              <p className="text-gray-500 text-sm">{post.description}</p>
+              <p className="text-gray-500 text-sm line-clamp-3">
+                {post.description}
+              </p>
               <a
                 href={post.link}
                 className="text-[#9188F1] font-semibold mt-2 block"
@@ -136,12 +136,11 @@ const BlogSlider = () => {
 
       <div className="flex justify-center gap-4 mt-5">
         <button
-          className={`p-3 bg-white ring-1 ring-gray-300 cursor-pointer shadow-md rounded-full transition
-            ${
-              activeIndex === 0
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-[#9188F1] group"
-            }`}
+          className={`p-3 bg-white ring-1 ring-gray-300 cursor-pointer shadow-md rounded-full transition ${
+            activeIndex === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-[#9188F1] group"
+          }`}
           onClick={prevSlide}
           disabled={activeIndex === 0}
         >
@@ -153,12 +152,11 @@ const BlogSlider = () => {
         </button>
 
         <button
-          className={`p-3 bg-white ring-1 ring-gray-300 cursor-pointer shadow-md rounded-full transition
-            ${
-              activeIndex >= maxIndex
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-[#9188F1] group"
-            }`}
+          className={`p-3 bg-white ring-1 ring-gray-300 cursor-pointer shadow-md rounded-full transition ${
+            activeIndex >= maxIndex
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-[#9188F1] group"
+          }`}
           onClick={nextSlide}
           disabled={activeIndex >= maxIndex}
         >
