@@ -13,7 +13,7 @@ const BlogFeed = () => {
           Stay informed with the newest features, trends, and gift ideas.
         </p>
       </div>
-      <div className="grid place-items-center grid-cols-1 lg:grid-cols-2 ">
+      <div className="grid place-items-center  grid-cols-1 lg:grid-cols-2 w-[80%] m-auto">
         <BlogCard Writer="Mohamed Ahmed" />
         <BlogCard Writer="Abdeltawab Shaaban" />
       </div>

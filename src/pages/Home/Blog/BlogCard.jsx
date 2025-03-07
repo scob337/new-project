@@ -1,5 +1,6 @@
+import { FiMessageCircle } from "react-icons/fi";
 
-const BlogCard = ({  Writer }) => {
+const BlogCard = ({ Writer }) => {
   return (
     <div className="flex flex-col justify-center items-center bg-gray-100 w-[80%]">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full group">

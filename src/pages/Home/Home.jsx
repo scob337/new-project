@@ -10,6 +10,7 @@ import BlogFeed from "./Blog/BlogFeed";
 import Questions from "./Questions/Questions";
 import Contribute2 from "./Contribute2";
 import BlogSlider from "./Blogs";
+import NewsSection from "./LatestNews";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <MobileMockupSlider />
       <BlogSlider />
       <BlogFeed />
+      <NewsSection/>
       <Questions />
     </div>
   );
