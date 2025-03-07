@@ -1,7 +1,7 @@
 import HeroImg from "../../assets/images/bgDesktop.png";
 import { FaPlay } from "react-icons/fa";
 import CustomButton from "../../Components/sharedComponents/Button";
-import StoreButtons from "../../Components/sharedComponents/storeButtons";
+import StoreButtons from "../../Components/sharedComponents/StoreButtons";
 
 const HeroSection = () => {
   return (
