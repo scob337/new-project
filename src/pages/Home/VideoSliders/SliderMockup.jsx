@@ -3,8 +3,11 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Video1 from "../../../assets/Videos/1.mp4";
 import Video2 from "../../../assets/Videos/2.mp4";
 import Video3 from "../../../assets/Videos/3.mp4";
+import Video4 from "../../../assets/Videos/3.mp4";
+import Video5 from "../../../assets/Videos/3.mp4";
+import Video6 from "../../../assets/Videos/3.mp4";
 
-const videos = [Video1, Video2, Video3];
+const videos = [Video1, Video2, Video3,Video4, Video5, Video6 ];
 
 const SliderMockup = () => {
   const [activeIndex, setActiveIndex] = useState(1);
