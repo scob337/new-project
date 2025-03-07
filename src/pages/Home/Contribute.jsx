@@ -3,7 +3,7 @@ import Image from "../../assets/images/dreamers.png";
 import Image2 from "../../assets/images/Dreamer1.jfif";
 import Image3 from "../../assets/images/Dreamer2.jfif";
 import IconImage from "../../assets/images/Dreamer3.jfif";
-import StoreButtons from "../../Components/sharedComponents/storeButtons";
+import StoreButtons from "../../Components/sharedComponents/StoreButtons";
 import BackGround from "../../Components/sharedComponents/BackGround";
 
 const Contribute = () => {

@@ -1,38 +1,36 @@
 import { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-
+import BlogImg1 from '../../assets/images/Blog1.jfif'
+import BlogImg2 from "../../assets/images/Blog2.jfif";
+import BlogImg3 from "../../assets/images/Blog3.jfif";
 const blogPosts = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9saWRheXxlbnwwfHwwfHx8MA%3D%3D",
-    date: "March 20, 2024",
+    image: BlogImg1,
     readTime: "9 min read",
     title: "The Ultimate Guide to Stress-Free Gifting",
     description:
-      "Ever struggled to find the perfect gift? With Cadonizer, you can say goodbye to last-minute shopping stress. Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
+      "Ever struggled to find the perfect gift? Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
     link: "#",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9saWRheXxlbnwwfHwwfHx8MA%3D%3D",
+    image: BlogImg2,
     date: "March 18, 2024",
     readTime: "6 min read",
     title: "How Group Gifting Makes Dreams Come True",
     description:
-      "Ever struggled to find the perfect gift? With Cadonizer, you can say goodbye to last-minute shopping stress. Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
+      "Ever struggled to find the perfect gift? Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
     link: "#",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9saWRheXxlbnwwfHwwfHx8MA%3D%3D",
+    image: BlogImg3,
     date: "March 16, 2024",
     readTime: "7 min read",
-    title: "Top 5 Occasions to Use Cadonizer",
+    title: "Top 5 Occasions to Use Our App",
     description:
-      "Ever struggled to find the perfect gift? With Cadonizer, you can say goodbye to last-minute shopping stress. Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
+      "Ever struggled to find the perfect gift? Learn how our app makes gifting easy, thoughtful, and fun for every occasion!",
     link: "#",
   },
 ];
@@ -41,17 +39,19 @@ const BlogSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % blogPosts.length);
+    if (activeIndex < blogPosts.length - 1) {
+      setActiveIndex(activeIndex + 1);
+    }
   };
 
   const prevSlide = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + blogPosts.length) % blogPosts.length
-    );
+    if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
+    }
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-5 relative">
+    <div className="max-w-6xl mx-auto py-10 px-5 relative overflow-hidden">
       <h1 className="text-3xl font-bold text-center mb-3">
         Check Our <span className="text-[#9188F1]">Blogs</span>
       </h1>
@@ -62,43 +62,43 @@ const BlogSlider = () => {
       <div className="relative flex items-center">
         {/* Left Button */}
         <button
-          className="absolute left-[-30px] z-10 p-3 bg-white shadow-md rounded-full hover:bg-[#DBF880] transition"
+          className="absolute left-0 z-10 p-3 bg-white shadow-md rounded-full hover:bg-[#DBF880] transition"
           onClick={prevSlide}
         >
           <IoIosArrowBack className="text-gray-700" />
         </button>
 
-        <div className="flex gap-5 overflow-hidden w-full">
-          {blogPosts.map((post, index) => (
-            <div
-              key={post.id}
-              className={`min-w-[300px] transition-all duration-500 transform ${
-                index === activeIndex ? "scale-100" : "scale-90 opacity-50"
-              }`}
-            >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full rounded-lg mb-3"
-              />
-              <p className="text-gray-400 text-sm">
-                {post.date} • {post.readTime}
-              </p>
-              <h3 className="font-semibold text-lg my-1">{post.title}</h3>
-              <p className="text-gray-500 text-sm">{post.description}</p>
-              <a
-                href={post.link}
-                className="text-[#9188F1] font-semibold mt-2 block"
-              >
-                Learn more
-              </a>
-            </div>
-          ))}
+        <div className="flex gap-5 w-full overflow-hidden">
+          <div
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${activeIndex * 33.33}%)` }}
+          >
+            {blogPosts.map((post) => (
+              <div key={post.id} className="w-[40%] p-3">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-[100%] h-[250px] object-cover object-center mb-3"
+                />
+                <p className="text-gray-400 text-sm">
+                  {post.date} • {post.readTime}
+                </p>
+                <h3 className="font-semibold text-lg my-1">{post.title}</h3>
+                <p className="text-gray-500 text-sm">{post.description}</p>
+                <a
+                  href={post.link}
+                  className="text-[#9188F1] font-semibold mt-2 block"
+                >
+                  Learn more
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Right Button */}
         <button
-          className="absolute right-[-30px] z-10 p-3 bg-white shadow-md rounded-full hover:bg-[#DBF880] transition"
+          className="absolute right-0 z-10 p-3 bg-white shadow-md rounded-full hover:bg-[#DBF880] transition"
           onClick={nextSlide}
         >
           <IoIosArrowForward className="text-gray-700" />
