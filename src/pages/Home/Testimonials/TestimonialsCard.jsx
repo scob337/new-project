@@ -13,7 +13,7 @@ const TestimonialCard = (props) => {
       {/* Logo & Quote */}
       <div className="flex justify-between items-start">
         <img src="" alt="Logo" className="w-24 opacity-60" />
-        <span className="w-15 h-15 text-gray-300 font-bold">
+        <span className="w-15 h-15 text-[#00000033] font-bold">
           <img src={Qoute} alt="" />
         </span>
       </div>

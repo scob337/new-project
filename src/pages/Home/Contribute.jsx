@@ -8,20 +8,20 @@ import BackGround from "../../Components/sharedComponents/BackGround";
 
 const Contribute = () => {
   const Motion = motion;
-
   return (
     <div className=" min-h-screen grid  place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
       <div className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10">
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl lg:text-5xl font-bold ">Why Contribute?</h1>
-          <h1 className="text-[#968AEF] text-2xl lg:text-5xl font-bold">
-            It's Stunning deal
+          <h1 className="text-3xl lg:text-5xl  font-[coolvetica]">
+            What <span className="text-[#968AEF]">Dreamers</span> <br /> Think
+            Of Us
           </h1>
         </div>
-        <p className="text-gray-500 w-[80%]">
-          Say goodbye to unwanted gifts! With Cadonizer, simply add your dream
-          gifts, and your friends can contribute to make them come true. No more
-          guessing—just the perfect surprise, every time!
+        <p className="text-gray-500 w-full lg:w-[80%] text-[20px] lg:text-[24px]  ">
+          Say goodbye to unwanted gifts! With{" "}
+          <span className="text-[#00000080] font-bold">Cadonizer</span>, simply
+          add your dream gifts, and your friends can contribute to make them
+          come true. No more guessing—just the perfect surprise, every time!
         </p>
         <StoreButtons />
       </div>

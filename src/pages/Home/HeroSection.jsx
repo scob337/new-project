@@ -16,11 +16,11 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/80"></div>
 
-      <div className="relative font-[coolvetica] z-10 flex flex-col justify-center items-center h-full text-center mt-30 lg:mt-50">
-        <h1 className="text-3xl font-bold leading-tight mb-1 lg:w-[40%] max-md:text-2xl">
+      <div className="relative  z-10 flex flex-col justify-center items-center h-full text-center mt-30 lg:mt-43">
+        <h1 className="text-3xl font-[coolvetica] leading-tight mb-1 lg:w-[35%] max-md:text-2xl">
           Transforming Wishes into Wonderful Moments.
         </h1>
-        <p className="text-lg text-gray-300 mb-8 w-90 max-md:w-[80%]">
+        <p className="text-lg text-gray-300 mb-8 w-85 max-md:w-[80%]">
           Because every celebration tells a story let Cadonizer help you write
           yours.{" "}
         </p>

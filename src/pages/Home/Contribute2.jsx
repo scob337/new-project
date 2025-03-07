@@ -14,7 +14,7 @@ const Contribute2 = () => {
   return (
     <div
       ref={ref}
-      className="lg:min-h-[50vh] min-h-screen grid place-items-center grid-cols-1 lg:grid-cols-2 w-full mb-10"
+      className="lg:min-h-[70vh] min-h-fit grid place-items-center grid-cols-1 lg:grid-cols-2 w-full mb-10"
     >
       {/* الصورة */}
       <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
@@ -50,18 +50,18 @@ const Contribute2 = () => {
         </div>
       </div>
 
-      {/* النصوص */}
-      <div className="col-span-2 lg:col-span-1 h-fit lg:h-[40%] lg:-ml-[70px] max-lg:p-10 flex flex-col gap-5">
-        <div className="flex flex-col gap-2">
+      <div className="col-span-2 lg:col-span-1 h-[90%] w-full lg:h-[60%]  lg:-ml-[70px] max-lg:p-10 flex flex-col gap-2">
+        <div className="flex flex-col gap-2 font-[coolvetica]">
           <h1 className="text-3xl lg:text-5xl font-bold">Why Contribute?</h1>
           <h1 className="text-[#968AEF] text-3xl lg:text-5xl font-bold">
             It's a Stunning Deal
           </h1>
         </div>
-        <p className="text-gray-500 w-[80%]">
-          Say goodbye to unwanted gifts! With Cadonizer, simply add your dream
-          gifts, and your friends can contribute to make them come true. No more
-          guessing—just the perfect surprise, every time!
+        <p className="text-gray-500  w-[75%] lg:w-[70%] text-[23px] ">
+          Say Goodbye To Unwanted Gifts! <br /> With
+          <span className="font-bold text-[#00000080]"> Cadonizer</span>, Simply
+          Add Your Dream Gifts, And Your Friends Can Contribute To Make Them
+          Come True. No More Guessing—just The Perfect Surprise, Every Time!
         </p>
       </div>
     </div>

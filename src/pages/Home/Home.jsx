@@ -23,6 +23,7 @@ const Home = () => {
       <Contribute2 />
       <Testimonials />
       <WorkDesign />
+      <br/>
       <MobileMockupSlider />
       <GalleryPage />
       <BlogFeed />
