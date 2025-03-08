@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BlogCard from "./BlogCard";
-
+import Blogs from "../../../assets/images/blogs.jfif";
+import Blogss from "../../../assets/images/blogss.jfif";
 const BlogFeed = () => {
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
@@ -23,11 +24,12 @@ const BlogFeed = () => {
         animate={titleInView ? { y: 0, opacity: 1 } : {}}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
       >
-        <h1 className="lg:text-5xl text-2xl text-center py-2 font-[coolvetica]">
-          Checkout Our Last <span className="text-[#9188F1]"> News</span>
+        <h1 className="lg:text-5xl text-xl text-center font-semibold py-2 font-[coolvetica]">
+          Stay Ahead in <span className="text-[#9188F1]"> Event</span> Planning
         </h1>
-        <p className="text-gray-500 text-center w-[80%] text-[20px] lg:text-[25px] lg:w-[40%] m-auto">
-          Stay informed with the newest features, trends, and gift ideas.
+        <p className="text-gray-500 text-center w-[80%] text-[18px] lg:text-[25px] lg:w-[50%] m-auto">
+          Get expert tips, trends, and new Cadonizer features for unforgettable
+          celebrations!
         </p>
       </motion.div>
 
@@ -45,7 +47,11 @@ const BlogFeed = () => {
             damping: 12,
           }}
         >
-          <BlogCard Writer="Mohamed Ahmed" />
+          <BlogCard
+            Writer="Mohamed Ahmed"
+            Title="The Stress-Free Gifting"
+            Src={Blogs}
+          />
         </motion.div>
 
         <motion.div
@@ -57,7 +63,11 @@ const BlogFeed = () => {
             damping: 12,
           }}
         >
-          <BlogCard Writer="Abdeltawab Shaaban" />
+          <BlogCard
+            Writer="Abdeltawab Shaaban"
+            Title="Top 5 Occasions to Use"
+            Src={Blogss}
+          />
         </motion.div>
       </div>
     </div>

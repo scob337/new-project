@@ -9,6 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 h-full">
         <img
           src={HeroImg}
+          loading="lazy"
           alt="Background Image"
           className="object-cover object-center w-full h-full"
         />

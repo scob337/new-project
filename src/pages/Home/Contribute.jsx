@@ -14,19 +14,20 @@ const Contribute = () => {
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, type: "spring", bounce: 0.4 }}
-        className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10"
+        className="col-span-2 lg:col-span-1 lg:w-[530px] lg:h-[450px] flex flex-col gap-5 max-lg:mb-15 px-10"
       >
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl lg:text-5xl font-bold font-[coolvetica]">
-            What <span className="text-[#968AEF]">Dreamers</span> <br /> Think
-            Of Us
+          <h1 className="w-[268px] h-[56] leading-[28px] text-[27px] max-lg:m-auto max-lg:text-center font-[400] lg:w-[412px] lg:h-[96px] lg:text-[50px] lg:leading-[48px] font-[coolvetica]">
+            Your Perfect <span className="text-[#968AEF]">Gift</span>, Just a
+            Click Away
           </h1>
         </div>
-        <p className="text-gray-500 w-full lg:w-[80%] text-[20px] lg:text-[24px]  ">
-          Say goodbye to unwanted gifts! With{" "}
-          <span className="text-[#00000080] font-bold">Cadonizer</span>, simply
-          add your dream gifts, and your friends can contribute to make them
-          come true. No more guessing—just the perfect surprise, every time!
+        <p className="text-gray-500 w-[346px] h-[150px] text-[18px] leading-[25px] font-[500] text-center  lg:w-[530px] lg:h-[222px] lg:text-[25px] lg:leading-[37px]  ">
+          Forget unwanted gifts and last-minute stress. With
+          <span className="text-[#00000080] font-bold">Cadonizer</span>, create
+          and share your wishlist effortlessly. Get AI-powered recommendations
+          and let friends contribute—no guessing, just the perfect surprise
+          every time.
         </p>
         <StoreButtons />
       </Motion.div>
