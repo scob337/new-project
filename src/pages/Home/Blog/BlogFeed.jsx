@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import BlogCard from "./BlogCard";
 import Blogs from "../../../assets/images/blogs.jfif";
 import Blogss from "../../../assets/images/blogss.jfif";
+
 const BlogFeed = () => {
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
