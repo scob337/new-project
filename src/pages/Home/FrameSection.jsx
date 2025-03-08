@@ -10,7 +10,7 @@ const FrameSection = () => {
   const [Muted, setMuted] = useState(true);
   const Motion = motion;
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: true, 
     threshold: 0.2,
     once: true,
   });

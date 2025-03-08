@@ -1,21 +1,64 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import BlogCard from "./BlogCard";
-import MainTitle from "../../../Components/sharedComponents/MainTitle";
 
 const BlogFeed = () => {
+  const { ref: titleRef, inView: titleInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const { ref: cardsRef, inView: cardsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <div className="my-10 flex flex-col gap-5">
-      <div>
-        <h1 className="lg:text-5xl text-2xl  text-center py-2 font-[coolvetica]">
+      {/* العنوان والنصوص مع تأثير bounce */}
+      <motion.div
+        ref={titleRef}
+        initial={{ y: -100, opacity: 0 }}
+        animate={titleInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      >
+        <h1 className="lg:text-5xl text-2xl text-center py-2 font-[coolvetica]">
           Checkout Our Last <span className="text-[#9188F1]"> News</span>
         </h1>
         <p className="text-gray-500 text-center w-[80%] text-[20px] lg:text-[25px] lg:w-[40%] m-auto">
           Stay informed with the newest features, trends, and gift ideas.
         </p>
-      </div>
-      <div className="grid place-items-center  grid-cols-1 lg:grid-cols-2 w-[80%] m-auto">
-        <BlogCard Writer="Mohamed Ahmed" />
-        <BlogCard Writer="Abdeltawab Shaaban" />
+      </motion.div>
+
+      {/* Blog Cards مع تأثير scale بدون تأخير */}
+      <div
+        ref={cardsRef}
+        className="grid place-items-center grid-cols-1 lg:grid-cols-2 w-[70%] m-auto"
+      >
+        <motion.div
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={cardsInView ? { scale: 1, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 12,
+          }}
+        >
+          <BlogCard Writer="Mohamed Ahmed" />
+        </motion.div>
+
+        <motion.div
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={cardsInView ? { scale: 1, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 12,
+          }}
+        >
+          <BlogCard Writer="Abdeltawab Shaaban" />
+        </motion.div>
       </div>
     </div>
   );
