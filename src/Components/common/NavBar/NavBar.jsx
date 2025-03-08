@@ -47,7 +47,11 @@ export default function NavBar() {
     };
   }, []);
   return (
-    <nav className="absolute top-5  left-[5%] lg:left-[20%]  max-md:w-[90%]  lg:w-[75%] h-[74px] xl:w-[66%] rounded-4xl z-50 text-white bg-black">
+    <nav
+      className="absolute top-5  left-[0%]  min-sm:left-[2%] lg:left-[3%] xl:left-[15%] 
+     w-[100%] min-sm:w-[362px]  lg:w-[953px] h-[74px]
+      rounded-4xl z-50 text-white bg-black"
+    >
       <div className="container flex justify-between items-center px-5 py-2">
         {/* Logo Section */}
         <div className="logo ">
