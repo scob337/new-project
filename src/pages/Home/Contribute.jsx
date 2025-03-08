@@ -9,8 +9,13 @@ import BackGround from "../../Components/sharedComponents/BackGround";
 const Contribute = () => {
   const Motion = motion;
   return (
-    <div className=" min-h-screen grid  place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
-      <div className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10">
+    <div className="min-h-screen grid place-items-center gap-10 grid-cols-1 lg:grid-cols-2 w-full p-5">
+      <Motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="col-span-2 lg:col-span-1 h-[70%] flex flex-col gap-5 max-lg:mb-15 px-10"
+      >
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl lg:text-5xl font-bold font-[coolvetica]">
             What <span className="text-[#968AEF]">Dreamers</span> <br /> Think
@@ -24,7 +29,7 @@ const Contribute = () => {
           come true. No more guessing—just the perfect surprise, every time!
         </p>
         <StoreButtons />
-      </div>
+      </Motion.div>
 
       <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
         <div className="relative flex justify-center items-center w-[300px] lg:w-[350px] h-[550px] px-5">
@@ -43,7 +48,12 @@ const Contribute = () => {
             />
           </Motion.div>
 
-          <div className="absolute left-[-40px] lg:left-[-70px] top-[32%] lg:top-[37%] w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20">
+          <Motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="absolute left-[-40px] lg:left-[-70px] top-[32%] lg:top-[37%] w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20"
+          >
             <img
               src={Image2}
               alt="Product"
@@ -54,9 +64,14 @@ const Contribute = () => {
             <button className="bg-[#9188F1] text-white px-2 py-1 rounded-full text-[12px]">
               Add to my wish list
             </button>
-          </div>
+          </Motion.div>
 
-          <div className="absolute right-[-30px] bottom-5 w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20">
+          <Motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            className="absolute right-[-30px] bottom-5 w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20"
+          >
             <img
               src={Image3}
               alt="Product"
@@ -67,12 +82,17 @@ const Contribute = () => {
             <button className="bg-[#DBF880] text-black px-2 py-1 rounded-full text-[12px]">
               Add to my wish list
             </button>
-          </div>
+          </Motion.div>
 
-          <div className="absolute lg:right-[-5px] right-[5px] top-40 lg:top-30 w-[70px] h-[50px] bg-white rounded-xl shadow-md flex flex-col items-center justify-center z-20">
+          <Motion.div
+            initial={{ y: -30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+            className="absolute lg:right-[-5px] right-[5px] top-40 lg:top-30 w-[70px] h-[50px] bg-white rounded-xl shadow-md flex flex-col items-center justify-center z-20"
+          >
             <img src={IconImage} alt="Category" className="w-8 h-8" />
-            <p className="text-[10px]  text-gray-400">Accessoires</p>
-          </div>
+            <p className="text-[10px] text-gray-400">Accessoires</p>
+          </Motion.div>
         </div>
       </div>
     </div>

@@ -50,7 +50,12 @@ const Contribute2 = () => {
         </div>
       </div>
 
-      <div className="col-span-2 lg:col-span-1 h-[90%] w-full lg:h-[60%]  lg:-ml-[70px] max-lg:p-10 flex flex-col gap-2">
+      <Motion.div
+        initial={{ x: 100, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="col-span-2 lg:col-span-1 h-[90%] w-full lg:h-[60%] lg:-ml-[70px] max-lg:p-10 flex flex-col gap-2"
+      >
         <div className="flex flex-col gap-2 font-[coolvetica]">
           <h1 className="text-3xl lg:text-5xl font-bold">Why Contribute?</h1>
           <h1 className="text-[#968AEF] text-3xl lg:text-5xl font-bold">
@@ -63,7 +68,7 @@ const Contribute2 = () => {
           Add Your Dream Gifts, And Your Friends Can Contribute To Make Them
           Come True. No More Guessing—just The Perfect Surprise, Every Time!
         </p>
-      </div>
+      </Motion.div>
     </div>
   );
 };

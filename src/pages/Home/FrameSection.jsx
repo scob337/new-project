@@ -11,7 +11,8 @@ const FrameSection = () => {
   const Motion = motion;
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.4,
+    threshold: 0.2,
+    once: true,
   });
 
   return (

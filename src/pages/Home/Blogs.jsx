@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import BlogImg1 from "../../assets/images/Blog1.jfif";
 import BlogImg2 from "../../assets/images/Blog2.jfif";
@@ -38,6 +39,11 @@ const blogPosts = [
 ];
 
 const BlogSlider = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    triggerOnce: true, // This ensures the animation only runs once
+    threshold: 0.2, // Increased threshold for better trigger timing
+  });
   const [activeIndex, setActiveIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
 
@@ -54,7 +60,6 @@ const BlogSlider = () => {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -73,8 +78,13 @@ const BlogSlider = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-5 overflow-hidden">
-      <div className="flex justify-between items-start">
+    <div ref={ref} className="max-w-6xl mx-auto py-10 px-5 overflow-hidden">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="flex justify-between items-start"
+      >
         <div className="px-2">
           <h1 className="lg:text-3xl text-xl font-bold">
             Check Our <span className="text-[#9188F1]">Blogs</span>
@@ -86,9 +96,14 @@ const BlogSlider = () => {
         <button className="lg:w-[170px] lg:h-[52px] w-[150px] h-[40px] text-[14px] rounded-[26px] bg-[#9188F1] text-white lg:text-[16px] font-medium shadow-lg hover:bg-[#7a75d9] transition duration-300">
           Learn more
         </button>
-      </div>
+      </motion.div>
 
-      <div className="overflow-hidden relative">
+      <motion.div
+        initial={{ x: "100%", opacity: 0 }}
+        animate={isInView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 2, type: "spring", bounce: 0.4 }}
+        className="overflow-hidden relative posts"
+      >
         <div
           className="flex transition-transform duration-500 gap-5"
           style={{
@@ -132,7 +147,7 @@ const BlogSlider = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex justify-center gap-4 mt-5">
         <button
@@ -144,11 +159,7 @@ const BlogSlider = () => {
           onClick={prevSlide}
           disabled={activeIndex === 0}
         >
-          <IoIosArrowBack
-            className={`text-gray-700 transition ${
-              activeIndex === 0 ? "" : "group-hover:text-white"
-            }`}
-          />
+          <IoIosArrowBack className="text-gray-700  transition group-hover:text-white" />
         </button>
 
         <button
@@ -160,11 +171,7 @@ const BlogSlider = () => {
           onClick={nextSlide}
           disabled={activeIndex >= maxIndex}
         >
-          <IoIosArrowForward
-            className={`text-gray-700 transition ${
-              activeIndex >= maxIndex ? "" : "group-hover:text-white"
-            }`}
-          />
+          <IoIosArrowForward className="text-gray-700 transition group-hover:text-white" />
         </button>
       </div>
     </div>

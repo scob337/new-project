@@ -6,7 +6,7 @@ const WorkCard = ({ active, Title, Description }) => {
   const textColor = active ? "#FFFFFF96" : "#00000096";
   return (
     <div
-      className={` transition duration-300 p-4 rounded-2xl w-[370px] lg:w-[390px] h-[154px] flex flex-col  cursor-pointer shadow-2xl  `}
+      className={` transition duration-300 py-2 p-4 rounded-2xl w-[370px] lg:w-[390px] h-[154px] flex flex-col  cursor-pointer shadow-2xl  `}
       style={{
         backgroundColor: bgColor,
         color: active ? "white" : "",
@@ -23,7 +23,7 @@ const WorkCard = ({ active, Title, Description }) => {
         >
           <FaGift />
         </span>
-        <span className="text-xl font-bold ">{Title}</span>
+        <span className="text-lg font-semibold ">{Title}</span>
       </h1>
       <p
         className="text-[15px]"
