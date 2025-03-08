@@ -22,18 +22,22 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/80"></div>
 
-      <div className="relative  z-10 flex flex-col justify-center items-center h-full text-center mt-35 lg:mt-43 gap-2">
+      <div
+        className="relative  z-10 flex flex-col justify-center items-center
+       h-full text-center mt-35 lg:mt-43 gap-2"
+      >
         <h1
           className="w-[324px] h-[90px] leading-[45px] text-[40px] text-center font-[400] 
-        
-        lg:w-[500px] lg:h-[132px] lg:leading-[66px] lg:text-[60px] lg: font-[coolvetica] "
+        lg:w-[375px] lg:h-[114px] lg:text-[50px] lg:leading-[57px] 
+        xl:w-[500px] xl:h-[132px] xl:leading-[66px] xl:text-[60px] xl: font-[coolvetica] "
         >
           Your Event, Perfectly Planned
         </h1>
 
         <p
-          className="w-[381px] h-[78px] text-[22px] text-center leading-[26px] text-gray-300 font-[500]
-        lg:w-[627px] lg:h-[84px] lg:text-[30px] lg:leading-[42px]
+          className="w-[351px] h-[78px] text-[22px] text-center leading-[26px] text-gray-300 font-[500]
+        lg:w-[627px] lg:h-[64px] lg:text-[24px] lg:leading-[32px]
+        xl:w-[627px] xl:h-[84px] xl:text-[30px] xl:leading-[42px]
         "
         >
           From Dream to Reality—RSVPs, Wish Lists & Memories Made Easy with

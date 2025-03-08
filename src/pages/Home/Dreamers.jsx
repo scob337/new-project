@@ -62,12 +62,20 @@ const Dreamers = () => {
       <p className="text-gray-400 w-[330px] h-[50px] text-[18px] leading-[25px] lg:text-[25px] lg:w-[596px] lg:h-[60px] text-center mb-7">
         Your all-in-one event planner—seamless from organizing to gifting
       </p>
-      <div className="flex flex-wrap justify-center gap-6 w-[100%] ">
+      <div
+        className="flex flex-wrap justify-center gap-6 w-[100%]
+      
+      "
+      >
         {iconList.map((item, index) => {
           return (
             <div
               key={index}
-              className="group bg-white hover:bg-[#9188F1] cursor-pointer shadow-md w-[286] h-[171.6px]  lg:w-[265px] lg:h-[159px] flex flex-col justify-center items-center gap-1 p-3 rounded-lg border border-gray-200 transition-transform duration-300 hover:scale-105"
+              className="group bg-white hover:bg-[#9188F1] cursor-pointer shadow-md 
+              w-[286px] h-[171.6px]  lg:w-[265px] lg:h-[159px] flex flex-col justify-center 
+              items-center gap-1 p-3 rounded-lg border border-gray-200 transition-transform duration-300
+               
+              "
             >
               <span className="relative flex items-center justify-center w-[48px] h-[48px] rounded-full group-hover:bg-[#A29BF3]  bg-gray-800 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">
                 <span className="flex items-center justify-center w-[40px] h-[40px] rounded-full group-hover:bg-[#B4AEF5]  bg-gray-700 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">

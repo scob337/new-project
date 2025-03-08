@@ -6,8 +6,8 @@ const CustomButton = ({ children, onClick }) => {
       viewBox="0 0 185 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={onClick} // تمرير الفانكشن هنا
-      className="cursor-pointer"
+      onClick={onClick} 
+      className="cursor-pointer bg-black rounded-4xl"
     >
       <g filter="url(#filter0_ii_1_165)">
         <rect
@@ -19,7 +19,7 @@ const CustomButton = ({ children, onClick }) => {
         />
       </g>
       <foreignObject x="0" y="0" width="185" height="53">
-        <div className="w-full h-full flex items-center justify-center text-white font-semibold">
+        <div className="w-full h-full flex items-center justify-center  text-white font-semibold">
           {children}
         </div>
       </foreignObject>

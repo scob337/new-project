@@ -3,7 +3,8 @@ import Image from "../../assets/images/dreamers.png";
 import Image2 from "../../assets/images/Dreamer1.jfif";
 import Image3 from "../../assets/images/Dreamer2.jfif";
 import IconImage from "../../assets/images/Dreamer3.jfif";
-import StoreButtons from "../../Components/sharedComponents/StoreButtons";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
+import Google from "../../assets/images/icons8-google-play-store.svg";
 import BackGround from "../../Components/sharedComponents/BackGround";
 
 const Contribute = () => {
@@ -29,7 +30,66 @@ const Contribute = () => {
           and let friends contribute—no guessing, just the perfect surprise
           every time.
         </p>
-        <StoreButtons />
+        <div className="w-[306px] h-[46.56px] flex mt-5 gap-3 lg:w-[414px] lg:h-[63px]">
+          <button
+            className="flex  px-1 cursor-pointer items-center  bg-black text-white  w-[147.82px] h-[46.56px] rounded-[50px]
+          lg:w-[200px] lg:h-[63px]
+          
+          "
+          >
+            <img
+              src={Google}
+              alt=""
+              className="w-[45.63px] h-[25.66px]
+            
+            "
+            />
+            <div className="text-left flex flex-col gap-1">
+              <p
+                className="w-[87.22px] h-[8.87px] font-[400] text-[11px] leading-[100%] text-[#FFFFFF]
+              lg:w-[118px] lg:h-[12px] lg:text-[14px]
+              "
+              >
+                Get it on
+              </p>
+              <p
+                className="w-[87.21px] h-[8.86px]  leading-[100%] text-[13px] font-[600]
+              lg:w-[118px] lg:h-[12px] lg:text-[18px]
+              "
+              >
+                Google Play
+              </p>
+            </div>
+          </button>
+          {/* زر App Store */}
+          <button
+            className="flex gap-2 px-1 cursor-pointer items-center  bg-black text-white  w-[147.82px] h-[46.56px] rounded-[50px]
+          lg:w-[200px] lg:h-[63px] 
+          "
+          >
+            <FaApple
+              className="w-[21.59px] h-[25.13px]  text-white
+            lg:w-[29.22px] lg:h-[34px] 
+            "
+            />
+            <div className="text-left flex flex-col gap-1">
+              <p
+                className="w-[95px] h-[9px] font-[400] text-[11px] leading-[100%] text-[#FFFFFF]
+              lg:w-[118px] lg:h-[12px] lg:text-[14px]
+              "
+              >
+                Download on the
+              </p>
+              <p
+                className="w-[73.17px] h-[8.86px]  leading-[100%] text-[13px] font-[600]
+              lg:w-[99px] lg:h-[12px] lg:text-[17px]
+              "
+              >
+                App Store
+              </p>
+            </div>
+          </button>
+        </div>
       </Motion.div>
 
       <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
