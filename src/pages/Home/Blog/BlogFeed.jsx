@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BlogCard from "./BlogCard";
 import Blogs from "../../../assets/images/blogs.jfif";
-import Blogss from "../../../assets/images/blogss.jfif";
+import Blogs1 from "../../../assets/images/blogss.jfif";
 
 const BlogFeed = () => {
   const { ref: titleRef, inView: titleInView } = useInView({
@@ -67,7 +67,7 @@ const BlogFeed = () => {
           <BlogCard
             Writer="Abdeltawab Shaaban"
             Title="Top 5 Occasions to Use"
-            Src={Blogss}
+            Src={Blogs1}
           />
         </motion.div>
       </div>
