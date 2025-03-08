@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BlogCard from "./BlogCard";
 import Blogs from "../../../assets/images/blogs.jfif";
-import Blogs1 from "../../../assets/images/blogss.jfif";
+import Blogs1 from "../../../assets/images/Blogss.jfif";
 
 const BlogFeed = () => {
   const { ref: titleRef, inView: titleInView } = useInView({
