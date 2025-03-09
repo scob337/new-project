@@ -24,7 +24,7 @@ const FrameSection = () => {
     threshold: 0.2,
     once: true,
   });
-
+  const IMGS = [Img1, Img2, Img3, Img4, Img5, Img6, Img7];
   return (
     <div className="relative py-10 lg:min-h-screen flex flex-col items-center gap-40">
       <div className="lg:w-[1280px] lg:h-[62.42px] flex justify-between items-start m-auto">
@@ -44,7 +44,7 @@ const FrameSection = () => {
           </span>
         </h1>
         <div
-          className="xl:w-[966.84px] xl:h-[62.42px] flex gap-1 
+          className="xl:w-[966.84px]   flex gap-1 
             lg:w-[867px] 
             w-[560px] 
             overflow-x-hidden
@@ -54,59 +54,26 @@ const FrameSection = () => {
             <Swiper
               modules={[Autoplay]}
               spaceBetween={10}
-              slidesPerView={3} // أقل عدد صور تظهر في أصغر شاشة
+              slidesPerView={2}
               breakpoints={{
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 1 },
-                1024: { slidesPerView: 4 },
-                1280: { slidesPerView: 5 },
+                640: { slidesPerView: 4 },
+                768: { slidesPerView: 5 },
+                1024: { slidesPerView: 6 },
+                1280: { slidesPerView: 7 },
               }}
               loop={true}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
               className="w-[90%] xl:w-[966.84px] h-auto"
             >
-              <SwiperSlide>
-                <img
-                  src={Img1}
-                  alt="Img1"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Img2}
-                  alt="Img2"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Img3}
-                  alt="Img3"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Img4}
-                  alt="Img4"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Img5}
-                  alt="Img5"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Img6}
-                  alt="Img6"
-                  className="h-[74px] object-cover  m-auto"
-                />
-              </SwiperSlide>
+              {IMGS.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={img}
+                    alt="Img1"
+                    className="h-[74px] object-contain  m-auto"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

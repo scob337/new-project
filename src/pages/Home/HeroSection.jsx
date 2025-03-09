@@ -7,8 +7,8 @@ const HeroSection = () => {
   return (
     <div
       className="relative
-    
-    w-[400px] h-[745px] 
+
+    w-[400px] md:w-[100vw] h-[745px] 
     lg:w-[1280px] lg:h-[832px]  text-white overflow-hidden"
     >
       <div className="absolute inset-0 h-full">
