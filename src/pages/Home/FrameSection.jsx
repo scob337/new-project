@@ -11,20 +11,49 @@ import Img3 from "../../assets/images/Partner/3.png";
 import Img4 from "../../assets/images/Partner/4.png";
 import Img5 from "../../assets/images/Partner/5.png";
 import Img6 from "../../assets/images/Partner/6.png";
-import Img7 from "../../assets/images/Partner/7.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import B1 from "../../assets/images/b1.png";
+import B2 from "../../assets/images/b2.png";
+import B3 from "../../assets/images/b3.jfif";
+import B4 from "../../assets/images/b4.jfif";
+const cardData = [
+  {
+    title: "Wishlist Gift Planning",
+    image: B2,
+    bgColor: "#F3DE8B",
+    Color: "black",
+  },
+  {
+    title: "RSVP Tracking",
+    image: B3,
+    bgColor: "#F3E5DF",
+    Color: "black",
+  },
+  {
+    title: "Invitation Design",
+    image: B1,
+    bgColor: "#C9DFDD",
+    Color: "black",
+  },
+  {
+    title: "AI Event Assistant",
+    image: B4,
+    bgColor: "#C5BBF3",
+    Color: "white",
+  },
+];
+
 const FrameSection = () => {
   const [Muted, setMuted] = useState(true);
   const Motion = motion;
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-    once: true,
-  });
-  const IMGS = [Img1, Img2, Img3, Img4, Img5, Img6, Img7];
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2 });
+  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.2 });
+  const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
+  const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.2 });
+  const IMGS = [Img1, Img2, Img3, Img4, Img5, Img6];
   return (
     <div className="relative py-10 lg:min-h-screen flex flex-col items-center gap-40">
       <div className="lg:w-[1280px] lg:h-[62.42px] flex justify-between items-start m-auto">
@@ -80,7 +109,7 @@ const FrameSection = () => {
       </div>
 
       <div
-        ref={ref}
+        ref={ref1}
         className="relative flex flex-col gap-10 items-center 
       lg:w-[1280px] lg:h-[947px] 
       "
@@ -98,7 +127,7 @@ const FrameSection = () => {
             )}
           </CustomButton>
         </div>
-        <div className="relative z-30">
+        <div className="relative z-30 ">
           <MobileMockup>
             <video
               className="w-full h-[100%] object-cover object-center"
@@ -117,49 +146,61 @@ const FrameSection = () => {
 
         <div className="relative w-full flex flex-wrap lg:flex-nowrap justify-center items-center mt-10 lg:absolute lg:w-auto">
           <Motion.div
-            className="absolute  hidden lg:inline-block top-[250px] left-[-180px] rotate-[-6deg] z-20"
-            initial={{ x: -200, opacity: 0 }}
-            animate={
-              inView ? { x: [-200, -175, -180], opacity: [0, 1, 1] } : {}
-            }
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="absolute hidden 
+            max-md:w-[250px]
+            max-md:left-[100px] max-md:top-[-10px]
+            md:inline-block md:top-[370px] md:left-[-250px] rotate-[-6deg] z-50"
+            ref={ref1}
+            initial={{ x: -300, opacity: 0 }}
+            animate={inView1 ? { x: -180, opacity: 1, scale: 1.05 } : {}}
+            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            <CardWithImg title="Invitation Design" image="path/to/image1.jpg" />
+            <CardWithImg {...cardData[0]} />
           </Motion.div>
 
           <Motion.div
-            className="absolute  hidden lg:inline-block top-[250px] right-[-200px] rotate-[6deg] z-40"
-            initial={{ x: 180, opacity: 0 }}
-            animate={inView ? { x: [180, 210, 200], opacity: [0, 1, 1] } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="absolute hidden lg:inline-block top-[450px] right-[-250px] rotate-[6deg] z-40"
+            ref={ref2}
+            initial={{ x: 300, opacity: 0 }}
+            animate={inView2 ? { x: 200, opacity: 1, scale: 1.05 } : {}}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 100,
+              delay: 0.2,
+            }}
           >
-            <CardWithImg title="RSVP Tracking" image="path/to/image2.jpg" />
+            <CardWithImg {...cardData[3]} />
           </Motion.div>
 
           <Motion.div
-            className="absolute hidden lg:inline-block  top-[-10%] lg:left-[-200px]  rotate-[-6deg]"
-            initial={{ x: -200, opacity: 0 }}
-            animate={
-              inView ? { x: [-200, -175, -180], opacity: [0, 1, 1] } : {}
-            }
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            className="absolute hidden lg:inline-block top-[50px] lg:left-[-270px] rotate-[-6deg]"
+            ref={ref3}
+            initial={{ x: -300, opacity: 0 }}
+            animate={inView3 ? { x: -180, opacity: 1, scale: 1.05 } : {}}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 100,
+              delay: 0.4,
+            }}
           >
-            <CardWithImg
-              title="Wishlist Gift Planning"
-              image="path/to/image3.jpg"
-            />
+            <CardWithImg {...cardData[2]} />
           </Motion.div>
 
           <Motion.div
-            className="absolute  hidden lg:inline-block  top-[40%] right-[-200px] rotate-[6deg] z-40"
-            initial={{ x: 200, opacity: 0 }}
-            animate={inView ? { x: [200, 205, 200], opacity: [0, 1, 1] } : {}}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            className="absolute hidden lg:inline-block top-[130px] right-[-250px] rotate-[6deg] z-40"
+            ref={ref4}
+            initial={{ x: 300, opacity: 0 }}
+            animate={inView4 ? { x: 200, opacity: 1, scale: 1.05 } : {}}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 100,
+              delay: 0.6,
+            }}
           >
-            <CardWithImg
-              title="AI Event Assistant"
-              image="path/to/image4.jpg"
-            />
+            <CardWithImg {...cardData[1]} />
           </Motion.div>
         </div>
       </div>

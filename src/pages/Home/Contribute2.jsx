@@ -14,9 +14,8 @@ const Contribute2 = () => {
   return (
     <div
       ref={ref}
-      className="lg:min-h-[70vh] min-h-fit grid place-items-center grid-cols-1 lg:grid-cols-2 w-full mb-10 lg:flex lg:flex-row-reverse"
+      className="lg:min-h-[70vh] min-h-fit grid place-items-center grid-cols-1 lg:grid-cols-2 w-full lg:mb-10 lg:flex lg:flex-row-reverse lg:gap-20"
     >
-      {/* الجزء الخاص بالنص */}
       <Motion.div
         initial={{ x: 200, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
@@ -26,27 +25,33 @@ const Contribute2 = () => {
           bounce: 0.5,
           damping: 9,
         }}
-        className="col-span-2 lg:col-span-1 h-[90%] w-full lg:h-[60%] lg:-ml-[70px] max-lg:p-10 flex flex-col gap-2"
+        className="col-span-2 lg:col-span-1 m-auto lg:w-[523px] lg:h-[60%] 
+    lg:-ml-[70px] max-lg:p-10 flex flex-col lg:items-start items-center gap-2"
       >
-        <div className="flex flex-col gap-2 font-[coolvetica]">
-          <h1 className="w-[268px] h-[28px] text-[27px] leading-[28px] text-center font-[400] m-auto">
-            Never Miss a{" "}
-            <span className="text-[#968AEF] text-3xl lg:text-5xl font-bold">
-              Moment
-            </span>
-          </h1>
-        </div>
-        <p className="text-[#00000080] w-[346px] h-[100px] text-[18px] leading-[25px] text-center">
+        <h1 className="lg:w-[400px] text-[27px] lg:leading-[48px] lg:text-[50px] font-[500] font-[coolvetica] text-center lg:text-start
+        
+        max-md:w-[268px] max-md:h-[28px] max-md:mb-2 max-md:leading-[28px]
+        ">
+          Never Miss A 
+          <span className="text-[#968AEF] font-bold"> Moment</span>
+        </h1>
+        <p
+          className="text-[#00000080] lg:w-[515px] lg:text-start lg:text-[25px] lg:leading-[37px] font-[500]
+        w-[346px] h-[100px] text-[18px] leading-[25px] text-center
+        "
+        >
           Stay on top of every celebration with smart countdowns, effortless
           planning, and easy RSVP management. Stress-free events start with
           Cadonizer!
         </p>
       </Motion.div>
 
-      {/* الجزء الخاص بالصورة */}
-      <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] relative max-lg:mt-10">
-        <div className="relative flex justify-center items-center w-[400px] lg:w-[400px] h-[400px] px-5 overflow-hidden">
-          <div className="Background absolute w-full lg:w-[400px] h-full lg:h-[420px] rounded-[30px] overflow-hidden bg-[#9188F1] flex items-center justify-center">
+      <div className="col-span-2 lg:col-span-1 flex justify-center items-center h-[100%] lg:w-[548px] relative ">
+        <div className="relative flex justify-center items-center w-[400px] lg:w-[548px] h-[571px] px-5 overflow-hidden">
+          <div
+            className="Background absolute  w-[376px] lg:w-[400px] h-[391.781005859375px] lg:h-[420px]
+           rounded-[30px] overflow-hidden bg-[#9188F1] flex items-center justify-center "
+          >
             <Motion.div
               initial={{ y: 200, opacity: 0 }}
               animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -76,7 +81,12 @@ const Contribute2 = () => {
               bounce: 0.7,
               damping: 7,
             }}
-            className="absolute upper w-[250px] z-50 top-[59%] left-[62%] -translate-x-1/2 -translate-y-1/2 after:absolute after:content-[''] after:w-[10px] after:h-[80px] after:bg-white after:top-[97px] after:left-[19px] after:-rotate-[30deg] after:rounded-lg"
+            className="absolute upper w-[212px] lg:w-[250px] 
+            z-50 top-[59%] left-[61%] lg:top-[56.5%] lg:left-[59%] 
+            -translate-x-1/2 
+            -translate-y-1/2 after:absolute
+             after:content-[''] after:w-[10px] after:h-[80px] 
+            after:bg-white after:top-[80px] after:lg:top-[98px] after:lg:left-[20px] after:left-[22px] after:-rotate-[30deg] after:rounded-lg"
           >
             <img
               src={Image2}

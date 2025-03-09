@@ -18,7 +18,6 @@ const BlogFeed = () => {
 
   return (
     <div className="my-10 flex flex-col gap-5">
-      {/* العنوان والنصوص مع تأثير bounce */}
       <motion.div
         ref={titleRef}
         initial={{ y: -100, opacity: 0 }}
