@@ -30,7 +30,8 @@ const HeroSection = () => {
           {" "}
           <h1
             className="w-[324px] h-[90px] leading-[45px] text-[40px] text-center font-[400] 
-        lg:w-[375px] lg:h-[114px] lg:text-[50px] lg:leading-[57px] 
+        lg:w-[375px] lg:h-[114px] lg:text-[50px] lg:leading-[57px]  m-auto
+        
         xl:w-[500px] xl:h-[132px] xl:leading-[66px] xl:text-[60px] xl: font-[coolvetica] "
           >
             Your Event, Perfectly Planned

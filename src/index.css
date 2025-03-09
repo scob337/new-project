@@ -3,7 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: black;
+    border-radius: 10px;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: #9188F1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-corner{
+    display: none;
+}
 .swiper-pagination-bullet {
     background-color: transparent !important;
     opacity: 0.5;
