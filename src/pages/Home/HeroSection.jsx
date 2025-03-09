@@ -8,7 +8,7 @@ const HeroSection = () => {
     <div
       className="relative
 
-    w-[400px] md:w-[100vw] h-[745px] 
+    sm:w-[400px] md:w-[100vw] h-[745px] 
     lg:w-[1280px] lg:h-[832px]  text-white overflow-hidden"
     >
       <div className="absolute inset-0 h-full">
@@ -24,25 +24,27 @@ const HeroSection = () => {
 
       <div
         className="relative  z-10 flex flex-col justify-center items-center
-       h-full text-center mt-35 lg:mt-43 gap-2"
+       h-full text-center mt-35 lg:mt-43 gap-3"
       >
-        <h1
-          className="w-[324px] h-[90px] leading-[45px] text-[40px] text-center font-[400] 
+        <div>
+          {" "}
+          <h1
+            className="w-[324px] h-[90px] leading-[45px] text-[40px] text-center font-[400] 
         lg:w-[375px] lg:h-[114px] lg:text-[50px] lg:leading-[57px] 
         xl:w-[500px] xl:h-[132px] xl:leading-[66px] xl:text-[60px] xl: font-[coolvetica] "
-        >
-          Your Event, Perfectly Planned
-        </h1>
-
-        <p
-          className="w-[351px] h-[78px] text-[22px] text-center leading-[26px] text-gray-300 font-[500]
+          >
+            Your Event, Perfectly Planned
+          </h1>
+          <p
+            className="w-[351px] h-[78px] text-[22px] text-center leading-[26px] text-gray-300 font-[500]
         lg:w-[627px] lg:h-[64px] lg:text-[24px] lg:leading-[32px]
         xl:w-[627px] xl:h-[84px] xl:text-[30px] xl:leading-[42px]
         "
-        >
-          From Dream to Reality—RSVPs, Wish Lists & Memories Made Easy with
-          Cadonizer.
-        </p>
+          >
+            From Dream to Reality—RSVPs, Wish Lists & Memories Made Easy with
+            Cadonizer.
+          </p>
+        </div>
 
         <CustomButton>
           <div className="flex justify-between items-center w-[151px] h-[46.6px]">
