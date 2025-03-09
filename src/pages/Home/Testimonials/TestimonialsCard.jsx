@@ -1,5 +1,7 @@
 import React from "react";
 import Qoute from "../../../assets/images/qoute.png";
+import Logo from "../../../assets/images/Logo.png";
+
 const TestimonialCard = (props) => {
   const { name, role, message, IMG } = props;
 
@@ -12,7 +14,14 @@ const TestimonialCard = (props) => {
     <div className="w-[360px] max-w-md h-[360px] flex flex-col justify-between bg-white shadow-lg rounded-2xl p-2 border border-gray-200">
       {/* Logo & Quote */}
       <div className="flex justify-between items-start">
-        <img src="" alt="Logo" className="w-24 opacity-60" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className=" filter grayscale-[80%]
+          w-[255px] 
+          "
+        />
+
         <span className="w-15 h-15 text-[#00000033] font-bold">
           <img src={Qoute} alt="" />
         </span>

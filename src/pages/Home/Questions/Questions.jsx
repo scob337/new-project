@@ -33,7 +33,7 @@ const Questions = () => {
     <div className="flex items-center justify-center min-h-screen px-4">
       <div className="w-full p-8 bg-white shadow-xl rounded-lg">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="col-span-1 lg:col-span-1 flex flex-col gap-5">
+          <div className="col-span-1 lg:col-span-1 flex flex-col gap-5 max-md:items-center max-md:text-center">
             <h1 className="text-[20px] uppercase font-semibold text-[#00000069] ">
               FAQ’S
             </h1>
