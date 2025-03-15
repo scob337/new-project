@@ -24,7 +24,10 @@ const NewsSection = () => {
         transition={{ type: "spring", bounce: 0.4, duration: 1 }}
         className="lg:w-1/2 text-white space-y-5 text-center md:text-left z-30"
       >
-        <AiOutlineGift className="text-4xl text-black bg-[#E4FF3B] p-2 rounded-full mx-auto md:mx-0" />
+        <AiOutlineGift
+          className="text-4xl text-black bg-[#E4FF3B] p-2 rounded-full mx-auto md:mx-0"
+          aria-label="Gift Icon"
+        />
         <h2 className="text-3xl lg:text-5xl font-semibold font-[coolvetica]">
           Latest <span className="text-[#E4FF3B]">News</span> & Updates
         </h2>
@@ -32,14 +35,22 @@ const NewsSection = () => {
           Your Go-To Source For News, Tips, And Exclusive Offers Delivered Right
           To Your Inbox
         </p>
-        <div className="flex items-center justify-center md:justify-start space-x-2 bg-white rounded-full p-2 w-fit mx-auto md:mx-0">
-          <button className="bg-[#E4FF3B] cursor-pointer text-black font-medium px-6 py-2 rounded-full">
+        <div
+          className="flex items-center justify-center md:justify-start space-x-2 bg-white rounded-full p-2 w-fit mx-auto md:mx-0"
+          role="form"
+          aria-label="Email Signup Form"
+        >
+          <button
+            className="bg-[#E4FF3B] cursor-pointer text-black font-medium px-6 py-2 rounded-full"
+            aria-label="Sign Up for News"
+          >
             Sign Up
           </button>
           <input
             type="email"
             placeholder="Agustin38@Yahoo.Com"
             className="text-gray-600 px-4 bg-transparent outline-none"
+            aria-label="Enter your email address"
           />
         </div>
       </motion.div>
@@ -54,11 +65,9 @@ const NewsSection = () => {
       >
         <img
           src={Img}
-          alt="Mobile Mockup"
-          className="
-            scale-[3] lg:scale-[3] mx-auto relative bottom-[-200px] lg:-bottom-70
-            
-            md:scale-[2.8] md:bottom-[-70px]"
+          alt="Mobile Mockup showcasing the app"
+          className="scale-[3] lg:scale-[3] mx-auto relative bottom-[-200px] lg:-bottom-70 md:scale-[2.8] md:bottom-[-70px]"
+          loading="lazy"
         />
       </motion.div>
 

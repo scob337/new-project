@@ -28,12 +28,12 @@ const Contribute2 = () => {
         className="col-span-2 lg:col-span-1 m-auto lg:w-[523px] lg:h-[60%] 
     lg:-ml-[70px] max-lg:p-10 flex flex-col lg:items-start items-center gap-2"
       >
-        <h1 className="lg:w-[400px] text-[27px] lg:leading-[48px] lg:text-[50px] font-[500] font-[coolvetica] text-center lg:text-start
-        
+        <h1
+          className="lg:w-[400px] text-[27px] lg:leading-[48px] lg:text-[50px] font-[500] font-[coolvetica] text-center lg:text-start
         max-md:w-[268px] max-md:h-[28px] max-md:mb-2 max-md:leading-[28px]
-        ">
-          Never Miss A 
-          <span className="text-[#968AEF] font-bold"> Moment</span>
+        "
+        >
+          Never Miss A<span className="text-[#968AEF] font-bold"> Moment</span>
         </h1>
         <p
           className="text-[#00000080] lg:w-[515px] lg:text-start lg:text-[25px] lg:leading-[37px] font-[500]
@@ -65,8 +65,9 @@ const Contribute2 = () => {
             >
               <img
                 src={Image}
-                alt="Mobile UI"
+                alt="Mobile UI showcasing event planning features"
                 className="w-full h-full object-cover MobileUI"
+                loading="lazy"
               />
             </Motion.div>
           </div>
@@ -90,8 +91,9 @@ const Contribute2 = () => {
           >
             <img
               src={Image2}
-              alt="Mobile UI"
+              alt="Mobile UI showcasing event countdown and RSVP management"
               className="w-full h-full object-center object-cover rounded-5xl"
+              loading="lazy"
             />
           </Motion.div>
         </div>

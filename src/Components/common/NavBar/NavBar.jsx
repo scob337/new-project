@@ -3,6 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "../../../assets/images/Logo.png";
 import CustomButton from "../../sharedComponents/Button";
+
 const navigation = [
   {
     name: "Blog",
@@ -46,15 +47,16 @@ export default function NavBar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
     <nav
-      className="absolute top-5 left-1/2 transform -translate-x-1/2 
-  w-[362px] sm:w-[400px] md:w-[600px] lg:w-[953px] h-[74px]
-  rounded-4xl z-50 text-white bg-black"
+      className="fixed top-5 left-1/2 transform -translate-x-1/2 
+      w-[362px] sm:w-[400px] md:w-[600px] lg:w-[953px] h-[74px]
+      rounded-4xl z-[999] text-white bg-black"
     >
       <div className="container flex justify-between items-center px-5 py-2">
         {/* Logo Section */}
-        <div className="logo ">
+        <div className="logo">
           <CustomButton>
             <a href="#">
               <img
@@ -72,6 +74,7 @@ export default function NavBar() {
           relative after:content-[''] after:absolute after:inset-[2px] after:rounded-full 
           after:bg-white/10 after:pointer-events-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
         >
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -86,7 +89,7 @@ export default function NavBar() {
           {navigation.map((item, index) => (
             <li
               key={item.name}
-              className="relative text-[16px]  p-2"
+              className="relative text-[16px] p-2"
               style={{ fontWeight: "500" }}
             >
               <div
@@ -107,7 +110,7 @@ export default function NavBar() {
                   {item.dropList.map((dropItem) => (
                     <li
                       key={dropItem.name}
-                      className="px-4 py-2 w-[100%]  text-white lg:text-black underline-offset-4 hover:text-indigo-500 hover:decoration-indigo-400 decoration-4 hover:underline transition-all duration-300"
+                      className="px-4 py-2 w-[100%] text-white lg:text-black underline-offset-4 hover:text-indigo-500 hover:decoration-indigo-400 decoration-4 hover:underline transition-all duration-300"
                     >
                       <a className="block" href={dropItem.href}>
                         {dropItem.name}
@@ -122,16 +125,14 @@ export default function NavBar() {
           {/* Buttons inside dropdown in mobile */}
           <div className="lg:hidden flex flex-col gap-2 mt-3">
             <button
-              className="text-black  cursor-pointer
-          
-          px-5 py-2 ml-2 bg-[#DBF880]  rounded-3xl"
+              className="text-black cursor-pointer px-5 py-2 ml-2 bg-[#DBF880] rounded-3xl"
+              aria-label="Log in"
             >
               Log in
             </button>
             <button
-              className="text-white cursor-pointer
-          
-          px-5 py-2 bg-indigo-500 rounded-3xl"
+              className="text-white cursor-pointer px-5 py-2 bg-indigo-500 rounded-3xl"
+              aria-label="Sign Up"
             >
               Sign Up
             </button>
@@ -141,16 +142,14 @@ export default function NavBar() {
         {/* Buttons visible in large screens */}
         <div className="hidden lg:flex gap-2">
           <button
-            className="text-black  cursor-pointer
-          
-          px-5 py-2 ml-2 bg-[#DBF880]  rounded-3xl"
+            className="text-black cursor-pointer px-5 py-2 ml-2 bg-[#DBF880] rounded-3xl"
+            aria-label="Log in"
           >
             Log in
           </button>
           <button
-            className="text-white cursor-pointer
-          
-          px-5 py-2 bg-indigo-500 rounded-3xl"
+            className="text-white cursor-pointer px-5 py-2 bg-indigo-500 rounded-3xl"
+            aria-label="Sign Up"
           >
             Sign Up
           </button>

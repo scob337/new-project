@@ -1,3 +1,4 @@
+import React from "react";
 import AddFrindW from "../../assets/images/EventIcon/addFriend-w.png";
 import AIW from "../../assets/images/EventIcon/ai-w.png";
 import CalendarW from "../../assets/images/EventIcon/calendar-w.png";
@@ -14,18 +15,21 @@ import HandY from "../../assets/images/EventIcon/hand-y.png";
 import LoveY from "../../assets/images/EventIcon/Love-y.png";
 import ProfitY from "../../assets/images/EventIcon/profit-y.png";
 import QRY from "../../assets/images/EventIcon/qr-y.png";
+
 const iconList = [
   {
     IMG_W: CalendarW,
     IMG_Y: CalendarY,
     title: "Seamless Event Planning",
-    description: "Plan birthdays, weddings, and special occasions effortlessly in one place.",
+    description:
+      "Plan birthdays, weddings, and special occasions effortlessly in one place.",
   },
   {
     IMG_W: AddFrindW,
     IMG_Y: AddFrindY,
     title: "Smart Guest List & RSVPs",
-    description: "Send invites, track responses, and get insights in real-time.",
+    description:
+      "Send invites, track responses, and get insights in real-time.",
   },
   {
     IMG_W: GiftW,
@@ -82,20 +86,24 @@ const Dreamers = () => {
             className="group bg-white hover:bg-[#9188F1] cursor-pointer shadow-md 
               w-[286px] h-[171.6px] lg:w-[265px] lg:h-[159px] flex flex-col justify-center 
               items-center gap-1 p-3 rounded-lg border border-gray-200 transition-transform duration-300"
+            role="button"
+            tabIndex="0"
+            aria-label={`Learn more about ${item.title}`}
+            onKeyPress={(e) => e.key === "Enter" && console.log(item.title)}
           >
             <span className="relative flex items-center justify-center w-[48px] h-[48px] rounded-full group-hover:bg-[#A29BF3] bg-gray-800 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">
               <span className="flex items-center justify-center w-[40px] h-[40px] rounded-full group-hover:bg-[#B4AEF5] bg-gray-700 shadow-[inset_-2px_2px_4px_rgba(255,255,255,0.25),inset_2px_-2px_4px_rgba(255,255,255,0.25)]">
-                
                 <img
                   src={item.IMG_W}
-                  alt=""
+                  alt={item.title}
                   className="w-[22px] h-[22px] absolute group-hover:hidden"
+                  loading="lazy"
                 />
-
                 <img
                   src={item.IMG_Y}
-                  alt=""
+                  alt={item.title}
                   className="w-[22px] h-[22px] hidden group-hover:block"
+                  loading="lazy"
                 />
               </span>
             </span>

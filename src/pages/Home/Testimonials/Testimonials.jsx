@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import testimonialsData from "./Data";
 import TestimonialCard from "./TestimonialsCard";
 import TestimonialsHeader from "./TestimonialsHeader";
+
 const Testimonials = () => {
   const Motion = motion;
   return (
@@ -14,6 +15,7 @@ const Testimonials = () => {
         <TestimonialsHeader />
       </Motion.div>
 
+      {/* Decorative Circles */}
       <div className="absolute w-[300px] h-[300px] bg-white opacity-10 rounded-full top-[-50px] left-[300px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>
       <div className="absolute w-[500px] h-[500px] bg-white opacity-10 rounded-full bottom-[10px] right-[500px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>
       <div className="absolute w-[1000px] h-[1000px] bg-white opacity-10 rounded-full top-[-200px] right-[-500px] shadow-[inset 0px 4px 8px rgba(255,255,255,0.25), inset 0px -4px 8px rgba(255,255,255,0.25)]"></div>
@@ -28,6 +30,8 @@ const Testimonials = () => {
           <div
             key={index}
             className="flex justify-center items-center mb-10 overflow-visible z-50"
+            role="article"
+            aria-label={`Testimonial by ${name}`}
           >
             <TestimonialCard
               name={name}

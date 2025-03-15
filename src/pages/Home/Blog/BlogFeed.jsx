@@ -51,6 +51,7 @@ const BlogFeed = () => {
             Writer="Mohamed Ahmed"
             Title="The Stress-Free Gifting"
             Src={Blogs}
+            alt="Stress-Free Gifting Blog Cover"
           />
         </motion.div>
 
@@ -67,6 +68,7 @@ const BlogFeed = () => {
             Writer="Abdeltawab Shaaban"
             Title="Top 5 Occasions to Use"
             Src={Blogs1}
+            alt="Top 5 Occasions Blog Cover"
           />
         </motion.div>
       </div>

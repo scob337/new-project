@@ -34,16 +34,16 @@ const Questions = () => {
       <div className="w-full p-8 bg-white shadow-xl rounded-lg">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="col-span-1 lg:col-span-1 flex flex-col gap-5 max-md:items-center max-md:text-center">
-            <h1 className="text-[20px] uppercase font-semibold text-[#00000069] ">
+            <h1 className="text-[20px] uppercase font-semibold text-[#00000069]">
               FAQ’S
             </h1>
 
-            <h2 className="text-3xl font-semibold text-gray-800  lg:text-left font-[coolvetica] lg:w-[20%]">
+            <h2 className="text-3xl font-semibold text-gray-800 lg:text-left font-[coolvetica] lg:w-[20%]">
               Frequently Asked <br />{" "}
               <span className="text-[#9188F1]">Questions</span>
             </h2>
             <div>
-              <p className="text-[14px]  text-gray-400">Ask any questions</p>
+              <p className="text-[14px] text-gray-400">Ask any questions</p>
               <p className="text-[#9188F1] text-[14px]">
                 Cadonizer@support.com
               </p>
@@ -54,10 +54,15 @@ const Questions = () => {
               <div
                 key={index}
                 className="border border-gray-300 rounded-lg overflow-hidden"
+                role="region"
+                aria-labelledby={`faq-heading-${index}`}
               >
                 <button
+                  id={`faq-heading-${index}`}
                   className="w-full flex justify-between items-center p-5 text-lg font-medium bg-gray-100 transition-all cursor-pointer"
                   onClick={() => toggleFAQ(index)}
+                  aria-expanded={activeIndex === index}
+                  aria-controls={`faq-content-${index}`}
                 >
                   <span className="text-gray-800">{faq.question}</span>
                   <span className="text-xl font-bold flex justify-center items-center rounded-full w-5 h-5">
@@ -65,9 +70,11 @@ const Questions = () => {
                   </span>
                 </button>
                 <div
+                  id={`faq-content-${index}`}
                   className={`bg-white px-5 text-gray-700 transition-all duration-300 ease-in-out overflow-hidden ${
                     activeIndex === index ? "max-h-[200px] py-3" : "max-h-0"
                   }`}
+                  aria-hidden={activeIndex !== index}
                 >
                   {faq.answer}
                 </div>

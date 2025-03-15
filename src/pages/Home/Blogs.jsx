@@ -93,7 +93,10 @@ const BlogSlider = () => {
             Smart Gifting Ideas For Every Occasion!
           </p>
         </div>
-        <button className="lg:w-[170px] lg:h-[52px] w-[150px] h-[40px] text-[14px] rounded-[26px] bg-[#9188F1] text-white lg:text-[16px] font-medium shadow-lg hover:bg-[#7a75d9] transition duration-300">
+        <button
+          className="lg:w-[170px] lg:h-[52px] w-[150px] h-[40px] text-[14px] rounded-[26px] bg-[#9188F1] text-white lg:text-[16px] font-medium shadow-lg hover:bg-[#7a75d9] transition duration-300"
+          aria-label="Learn more about our blogs"
+        >
           Learn more
         </button>
       </motion.div>
@@ -125,11 +128,14 @@ const BlogSlider = () => {
                     ? "50%"
                     : "100%",
               }}
+              role="article"
+              aria-label={`Blog post: ${post.title}`}
             >
               <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-[250px] object-cover object-center mb-3"
+                loading="lazy"
               />
               <p className="text-gray-400 text-sm">
                 {post.date} • {post.readTime}
@@ -141,6 +147,7 @@ const BlogSlider = () => {
               <a
                 href={post.link}
                 className="text-[#9188F1] font-semibold mt-2 block"
+                aria-label={`Learn more about ${post.title}`}
               >
                 Learn more
               </a>
@@ -158,8 +165,9 @@ const BlogSlider = () => {
           }`}
           onClick={prevSlide}
           disabled={activeIndex === 0}
+          aria-label="Previous slide"
         >
-          <IoIosArrowBack className="text-gray-700  transition group-hover:text-white" />
+          <IoIosArrowBack className="text-gray-700 transition group-hover:text-white" />
         </button>
 
         <button
@@ -170,6 +178,7 @@ const BlogSlider = () => {
           }`}
           onClick={nextSlide}
           disabled={activeIndex >= maxIndex}
+          aria-label="Next slide"
         >
           <IoIosArrowForward className="text-gray-700 transition group-hover:text-white" />
         </button>

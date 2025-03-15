@@ -5,7 +5,7 @@ import Img from "../../../assets/images/giftImg.jfif";
 const WorkDesign = () => {
   const Motion = motion;
   return (
-    <div className="relative flex flex-col gap-[100px] ">
+    <div className="relative flex flex-col gap-[100px]">
       {/* العنوان والوصف */}
       <Motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -64,7 +64,12 @@ const WorkDesign = () => {
             viewport={{ once: true }}
             className="z-10"
           >
-            <img src={Img} alt="Gift" className="mx-auto" />
+            <img
+              src={Img}
+              alt="Gift illustration"
+              className="mx-auto"
+              loading="lazy"
+            />
           </Motion.div>
 
           {/* كروت العمل (للشاشات الصغيرة تكون تحت الصورة) */}

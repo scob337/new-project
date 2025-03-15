@@ -34,15 +34,14 @@ const Contribute = () => {
           <button
             className="flex  px-1 cursor-pointer items-center  bg-black text-white  w-[147.82px] h-[46.56px] rounded-[50px]
           lg:w-[200px] lg:h-[63px]
-          
           "
+            aria-label="Download on Google Play"
           >
             <img
               src={Google}
-              alt=""
-              className="w-[45.63px] h-[25.66px]
-            
-            "
+              alt="Google Play Store"
+              className="w-[45.63px] h-[25.66px]"
+              loading="lazy"
             />
             <div className="text-left flex flex-col gap-1">
               <p
@@ -66,6 +65,7 @@ const Contribute = () => {
             className="flex gap-2 px-1 cursor-pointer items-center  bg-black text-white  w-[147.82px] h-[46.56px] rounded-[50px]
           lg:w-[200px] lg:h-[63px] 
           "
+            aria-label="Download on the App Store"
           >
             <FaApple
               className="w-[21.59px] h-[25.13px]  text-white
@@ -106,14 +106,16 @@ const Contribute = () => {
               src={Image}
               alt="Mobile UI"
               className="w-full h-full object-cover MobileUI"
+              loading="lazy"
             />
           </Motion.div>
 
           <div className="absolute left-[-40px] lg:left-[-70px] top-[32%] lg:top-[37%] w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20">
             <img
               src={Image2}
-              alt="Product"
+              alt="Classic White T-Shirt"
               className="w-full h-[50%] lg:h-[60%] rounded-lg object-cover"
+              loading="lazy"
             />
             <p className="text-xs font-semibold">Classic White T-Shirt</p>
             <p className="text-xs text-gray-500">4.5 ★ (256.00)</p>
@@ -125,8 +127,9 @@ const Contribute = () => {
           <div className="absolute right-[-30px] bottom-5 w-[150px] h-[160px] lg:h-[190px] bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1 z-20">
             <img
               src={Image3}
-              alt="Product"
+              alt="Trendy Switcher Top"
               className="w-full h-[50%] lg:h-[60%] rounded-lg object-cover"
+              loading="lazy"
             />
             <p className="text-xs font-semibold">Trendy Switcher Top</p>
             <p className="text-xs text-gray-500">4.5 ★ (256.00)</p>
@@ -136,7 +139,12 @@ const Contribute = () => {
           </div>
 
           <div className="absolute lg:right-[-5px] right-[5px] top-40 lg:top-30 w-[70px] h-[50px] bg-white rounded-xl shadow-md flex flex-col items-center justify-center z-20">
-            <img src={IconImage} alt="Category" className="w-8 h-8" />
+            <img
+              src={IconImage}
+              alt="Accessories"
+              className="w-8 h-8"
+              loading="lazy"
+            />
             <p className="text-[10px] text-gray-400">Accessoires</p>
           </div>
         </div>

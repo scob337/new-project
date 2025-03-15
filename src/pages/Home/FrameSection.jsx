@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GiSpeaker, GiSpeakerOff } from "react-icons/gi";
@@ -19,6 +19,7 @@ import B1 from "../../assets/images/b1.png";
 import B2 from "../../assets/images/b2.png";
 import B3 from "../../assets/images/b3.jfif";
 import B4 from "../../assets/images/b4.jfif";
+
 const cardData = [
   {
     title: "Wishlist Gift Planning",
@@ -54,31 +55,15 @@ const FrameSection = () => {
   const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.2 });
   const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.2 });
   const IMGS = [Img1, Img2, Img3, Img4, Img5, Img6];
+
   return (
     <div className="relative py-10 lg:min-h-screen flex flex-col items-center gap-40">
+      {/* Partners Section */}
       <div className="lg:w-[1280px] lg:h-[62.42px] flex justify-between items-start m-auto">
-        <h1
-          className="
-          lg:w[197px] lg:h-[78px] lg:text-[40px]  lg:leading-[39px] font-[400] m-auto
-        w-[121px] h-[50px] text-[24px] leading-[25px]  font-[coolvetica] pl-2
-        "
-        >
-          Our <br />{" "}
-          <span
-            className="text-[#9188F1]
-          
-          "
-          >
-            partners
-          </span>
+        <h1 className="lg:w[197px] lg:h-[78px] lg:text-[40px] lg:leading-[39px] font-[400] m-auto w-[121px] h-[50px] text-[24px] leading-[25px] font-[coolvetica] pl-2">
+          Our <br /> <span className="text-[#9188F1]">partners</span>
         </h1>
-        <div
-          className="xl:w-[966.84px]   flex gap-1 
-            lg:w-[867px] 
-            w-[560px] 
-            overflow-x-hidden
-        "
-        >
+        <div className="xl:w-[966.84px] flex gap-1 lg:w-[867px] w-[560px] overflow-x-hidden">
           <div className="w-full flex justify-center">
             <Swiper
               modules={[Autoplay]}
@@ -98,8 +83,9 @@ const FrameSection = () => {
                 <SwiperSlide key={index}>
                   <img
                     src={img}
-                    alt="Img1"
-                    className="h-[74px] object-contain  m-auto"
+                    alt={`Partner ${index + 1}`}
+                    className="h-[74px] object-contain m-auto"
+                    loading="lazy"
                   />
                 </SwiperSlide>
               ))}
@@ -108,14 +94,16 @@ const FrameSection = () => {
         </div>
       </div>
 
+      {/* Video Section */}
       <div
         ref={ref1}
-        className="relative flex flex-col gap-10 items-center 
-      lg:w-[1280px] lg:h-[947px] 
-      "
+        className="relative flex flex-col gap-10 items-center lg:w-[1280px] lg:h-[947px]"
       >
-        <div className="flex justify-center  items-center  ">
-          <CustomButton onClick={() => setMuted(!Muted)}>
+        <div className="flex justify-center items-center">
+          <CustomButton
+            onClick={() => setMuted(!Muted)}
+            aria-label={Muted ? "Unmute video" : "Mute video"}
+          >
             {Muted ? (
               <>
                 <GiSpeakerOff size={26} /> Muted Video
@@ -127,13 +115,17 @@ const FrameSection = () => {
             )}
           </CustomButton>
         </div>
-        <div className="relative z-30 ">
+        <div className="relative z-30">
           <MobileMockup>
             <video
               className="w-full h-[100%] object-cover object-center"
               autoPlay
               loop
               muted={Muted}
+              preload="none"
+              loading="lazy"
+              aria-label="Wishew promotional video"
+              aria-describedby="video-description"
             >
               <source
                 src="https://wishew.com/videos/main.mp4"
@@ -142,14 +134,15 @@ const FrameSection = () => {
               Your browser does not support the video tag.
             </video>
           </MobileMockup>
+          <p id="video-description" className="sr-only">
+            A promotional video showcasing the features of Wishew.
+          </p>
         </div>
 
+        {/* Cards Section */}
         <div className="relative w-full flex flex-wrap lg:flex-nowrap justify-center items-center mt-10 lg:absolute lg:w-auto">
           <Motion.div
-            className="absolute hidden 
-            max-md:w-[250px]
-            max-md:left-[100px] max-md:top-[-10px]
-            md:inline-block md:top-[370px] md:left-[-250px] rotate-[-6deg] z-50"
+            className="absolute hidden max-md:w-[250px] max-md:left-[100px] max-md:top-[-10px] md:inline-block md:top-[370px] md:left-[-250px] rotate-[-6deg] z-50"
             ref={ref1}
             initial={{ x: -300, opacity: 0 }}
             animate={inView1 ? { x: -180, opacity: 1, scale: 1.05 } : {}}
