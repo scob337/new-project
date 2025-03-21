@@ -64,7 +64,7 @@ const Questions = () => {
                   aria-expanded={activeIndex === index}
                   aria-controls={`faq-content-${index}`}
                 >
-                  <span className="text-gray-800">{faq.question}</span>
+                  <span className="text-gray-800 max-md:text-[12px]">{faq.question}</span>
                   <span className="text-xl font-bold flex justify-center items-center rounded-full w-5 h-5">
                     {activeIndex === index ? "−" : "+"}
                   </span>

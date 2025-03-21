@@ -41,7 +41,9 @@ const NewsSection = () => {
           aria-label="Email Signup Form"
         >
           <button
-            className="bg-[#E4FF3B] cursor-pointer text-black font-medium px-6 py-2 rounded-full"
+            className="bg-[#E4FF3B] cursor-pointer text-black f
+            max-md:w-[30%]
+            ont-medium px-6 py-2 rounded-full"
             aria-label="Sign Up for News"
           >
             Sign Up
