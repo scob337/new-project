@@ -51,7 +51,7 @@ const NewsSection = () => {
           <input
             type="email"
             placeholder="Agustin38@Yahoo.Com"
-            className="text-gray-600 px-4 bg-transparent outline-none"
+            className="text-gray-600 px-4 bg-transparent outline-none max-md:w-[60%]"
             aria-label="Enter your email address"
           />
         </div>
