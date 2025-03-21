@@ -14,7 +14,8 @@ import NewsSection from "./LatestNews";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden w-full">
+      <div className="w-[95%] mx-auto">
       <HeroSection />
       <FrameSection />
       <Dreamers />
@@ -24,10 +25,11 @@ const Home = () => {
       <WorkDesign />
       <br />
       <MobileMockupSlider />
-      <BlogSlider />
+      <BlogSlider /> 
       <BlogFeed />
       <NewsSection/>
       <Questions />
+    </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 import Google from "../../assets/images/icons8-google-play-store.svg";
 const HeroSection = () => {
   return (
-    <div className="relative w-[100vw] h-screen lg:w-[1280px]  text-white overflow-hidden">
+    <div className="relative w-[100vw] h-screen   text-white overflow-hidden">
       <div className="absolute inset-0 h-full">
         <img
           src={HeroImg}
