@@ -11,7 +11,7 @@ const TestimonialCard = (props) => {
   );
 
   return (
-    <div className="w-[360px] max-w-md h-[360px] flex flex-col justify-between bg-white shadow-lg rounded-2xl p-2 border border-gray-200">
+    <div className=" w-[300px] lg:w-[360px]  h-[360px] flex flex-col justify-between bg-white shadow-lg rounded-2xl p-2 border border-gray-200">
       {/* Logo & Quote */}
       <div className="flex justify-between items-start">
         <img
